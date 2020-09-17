@@ -12,12 +12,12 @@ function Main() {
     <>
       <Header />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/watch" component={Watch} />
         <Route exact path="/groups" component={Groups} />
         <Route exact path="/gaming" component={Gaming} />
         <Route exact path="/profile" component={Profile} />
-        <Redirect to="/" />
+        <Redirect to="/home" />
       </Switch>
     </>
   );

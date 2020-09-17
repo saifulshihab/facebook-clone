@@ -27,7 +27,7 @@ function Header() {
           <Grid item xs={3}>
             <div className="header-left">
               <div className="wrap">
-                <Link to="/">
+                <Link to="/home">
                   <FaFacebook className="flogo" />
                 </Link>
                 <input placeholder="Search Facebook" />
@@ -36,7 +36,7 @@ function Header() {
           </Grid>
           <Grid item xs={6}>
             <div className="header-middle">
-              <Link to="/">
+              <Link to="/home">
                 <AiFillHome className="menuitem" />
               </Link>
               <Link to="/watch"><MdOndemandVideo className="menuitem" /></Link>
