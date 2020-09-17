@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import Profile from './ProfileComponent';
 import Home from './HomeComponent';
 import Watch from './WatchComponent';
@@ -23,4 +23,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default withRouter(Main);
