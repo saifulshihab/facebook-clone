@@ -1,38 +1,92 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fbfbfb;
+}
+#header {
+  background-color: white;
+  padding: 7px 10px;
+  box-shadow: 0 1.5px 3px 0px #ddd;
+}
+.flogo {
+  color: rgb(0, 114, 245);
+  font-size: 42px;
+  cursor: pointer;
+}
+.header-left .wrap {
+  display: flex;
+  align-items: center;
+}
+.header-left a {
+  margin-bottom: -7px;
+}
+.header-left input {
+  padding: 13px;
+  border-radius: 40px;
+  border: none;
+  background: #e4e7ea;
+  outline: none;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.header-middle {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding-bottom: 8px !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menuitem {
+  font-size: 28px;
+  padding: 10px 50px;
+  color: #aaaaaa;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.menuitem:hover {
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.header-right {
   display: flex;
-  flex-direction: column;
+  float: right;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 6px;
 }
-
-.App-link {
-  color: #61dafb;
+.header-right a {
+  text-decoration: none;
+  color: inherit;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rightitem {
+  font-size: 28px;
+  margin-right: 9px;
+  background-color: #e4e7ea;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 8px;
+}
+.rightitem:hover {
+  background-color: #e2e2e2;
+}
+.rightitem:last-child {
+  margin-right: 0;
+}
+.profile-btn {
+  margin-right: 9px;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  padding: 4px 5px;
+  cursor: pointer;
+}
+.profile-btn img {
+  width: 30px;
+  height: 30px;
+  margin-right: 7px;
+  border-radius: 50%;
+}
+.profile-btn:hover {
+  background-color: #e4e7ea;
+}
+.profile-btn p {
+  font-weight: 600;
+  margin: 0;
 }
