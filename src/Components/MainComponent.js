@@ -1,24 +1,26 @@
 import React from 'react';
-import Header from './Header';
+import Header from './HeaderComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import Profile from './ProfileComponent';
-import Home from './HomeComponent';
-import Watch from './WatchComponent';
-import Groups from './GroupComponent';
-import Gaming from './GamingComponent';
+import Profile from './Profile/ProfileComponent';
+import Home from './Home/HomeComponent';
+import Watch from './Watch/WatchComponent';
+import Groups from './Group/GroupComponent';
+import Gaming from './Gaming/GamingComponent';
 
 function Main() {
   return (
     <>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/watch" component={Watch} />
-        <Route exact path="/groups" component={Groups} />
-        <Route exact path="/gaming" component={Gaming} />
-        <Route exact path="/profile" component={Profile} />
-        <Redirect to="/" />
-      </Switch>
+      <div id="maincomponent">
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/watch" component={Watch} />
+          <Route exact path="/groups" component={Groups} />
+          <Route exact path="/gaming" component={Gaming} />
+          <Route exact path="/profile" component={Profile} />
+          <Redirect to="/" />
+        </Switch>
+      </div>
     </>
   );
 }

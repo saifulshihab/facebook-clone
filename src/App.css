@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #fbfbfb;
+  background-color: #f2f3f5;
+  font-family: 'Roboto', sans-serif;
+}
+#maincomponent{
+  height: 100vh; 
 }
 #header {
   background-color: white;
@@ -22,6 +28,7 @@ body {
 }
 .header-left input {
   padding: 13px;
+  padding-right: 45px;
   border-radius: 40px;
   border: none;
   background: #e4e7ea;

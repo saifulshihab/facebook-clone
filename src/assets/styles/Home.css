@@ -1,0 +1,5 @@
+.home_leftside {
+  z-index: 1000;
+  margin-top: 2px;
+  overflow-y: scroll;
+}
