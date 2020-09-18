@@ -1,0 +1,61 @@
+#newsfeed {
+  height: 110vh;
+  overflow-y: scroll;
+  text-align: center;
+}
+#newsfeed::-webkit-scrollbar {
+  right: 0;
+  width: 7px; /* width of the entire scrollbar */
+}
+#newsfeed::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+#newsfeed::-webkit-scrollbar-thumb {
+  background-color: #ddd; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+.mydayList {
+  height: 170px;
+  overflow: hidden;
+}
+.mydayList ul {
+  list-style: none;
+}
+.mydayList ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.mydayList ul li:last-child {
+  margin-right: 0;
+}
+.mydayList .myday {
+  background-image: url('../images/profile.JPG');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  width: 111.59px;
+  height: 158.38px;
+  border-radius: 15px;
+  padding: 10px;
+  opacity: 0.8;
+}
+.myday .img {
+  top: 0 !important;
+}
+.myday img {
+  width: 33px;
+  height: 33px;
+  border: 4px solid #ddd;
+  float: left;
+  border-radius: 50%;
+}
+.myday .p {
+  bottom: 0 !important;
+}
+.myday p {
+  bottom: 0;
+  margin: 0;
+  color: white;
+  margin-top: 100%;
+}

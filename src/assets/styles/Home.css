@@ -8,13 +8,13 @@
 ._home_rightside {
   float: right;
 }
-.home_leftside::-webkit-scrollbar {
+._home_rightside::-webkit-scrollbar, .home_leftside::-webkit-scrollbar {
   width: 7px; /* width of the entire scrollbar */
 }
-.home_leftside::-webkit-scrollbar-track {
+._home_rightside::-webkit-scrollbar, .home_leftside::-webkit-scrollbar-track {
   background: transparent; /* color of the tracking area */
 }
-.home_leftside::-webkit-scrollbar-thumb {
+._home_rightside::-webkit-scrollbar, .home_leftside::-webkit-scrollbar-thumb {
   background-color: #ddd; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }
