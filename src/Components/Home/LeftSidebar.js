@@ -265,7 +265,7 @@ function Leftsidebar() {
           aria-labelledby="nested-list-subheader"
           subheader={
             <ListSubheader component="div" id="nested-list-subheader">
-              Your Shortcuts <a href="">Edit</a>
+              Your Shortcuts
             </ListSubheader>
           }
           className={classes.root}

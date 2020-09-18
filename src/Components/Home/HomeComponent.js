@@ -12,8 +12,10 @@ function Home() {
         <Grid item xs={3}>
           <Leftsidebar />
         </Grid>
-        <Grid item xs={5}></Grid>
-        <Grid item xs={3}></Grid>
+        <Grid item xs={6}></Grid>
+        <Grid item xs={3}>
+          <Rightsidebar />
+        </Grid>
       </Grid>
     </>
   );
