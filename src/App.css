@@ -6,13 +6,15 @@ body {
   background-color: #f2f3f5;
   font-family: 'Roboto', sans-serif;
 }
-#maincomponent{
-  height: 100vh; 
-  overflow: hidden;
+#maincomponent {
+  margin-top: 70px;
 }
 #header {
   background-color: white;
+  position: fixed;
   width: 100%;
+  z-index: 1000;
+  top: 0;
   padding: 7px;
   box-shadow: 0 1.5px 3px 0px #ddd;
 }

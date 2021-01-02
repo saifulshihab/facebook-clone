@@ -1,20 +1,24 @@
 .home_leftside,
 ._home_rightside {
-  width: 80%;
+  height: 100vh;
+  width: 40%;
   margin-top: 2px;
   overflow-y: scroll;
-  height: 110vh;
+  position: fixed;
 }
 ._home_rightside {
   float: right;
 }
-._home_rightside::-webkit-scrollbar, .home_leftside::-webkit-scrollbar {
+._home_rightside::-webkit-scrollbar,
+.home_leftside::-webkit-scrollbar {
   width: 7px; /* width of the entire scrollbar */
 }
-._home_rightside::-webkit-scrollbar, .home_leftside::-webkit-scrollbar-track {
+._home_rightside::-webkit-scrollbar,
+.home_leftside::-webkit-scrollbar-track {
   background: transparent; /* color of the tracking area */
 }
-._home_rightside::-webkit-scrollbar, .home_leftside::-webkit-scrollbar-thumb {
+._home_rightside::-webkit-scrollbar,
+.home_leftside::-webkit-scrollbar-thumb {
   background-color: #ddd; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
 }

@@ -1,7 +1,5 @@
 #newsfeed {
-  height: 110vh;
-  overflow-y: scroll;
-  text-align: center;
+  scroll-padding-right: 0;
 }
 #newsfeed::-webkit-scrollbar {
   right: 0;
@@ -18,6 +16,7 @@
   width: 70%;
   margin: 0 auto;
   height: 190px;
+  text-align: center;
   overflow: hidden;
 }
 .mydayList ul {
@@ -66,7 +65,7 @@
   text-align: center;
 }
 .post_form {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   margin-top: 10px;
   background-color: rgb(255, 255, 255);
@@ -257,4 +256,93 @@
 }
 .postbtmbtn:hover {
   background-color: #3270d4;
+}
+.posts {
+  margin-top: 20px;
+}
+.post {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  max-height: 600px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 1.5px 1.5px 1.5px rgb(199, 199, 199);
+}
+.post .top {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+}
+.post .top .u_dp img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.post .top ._name {
+  margin-left: 10px;
+}
+.post .top ._name p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+}
+.post .top ._name span {
+  font-size: 12px;
+  color: #8d8d8d;
+}
+.post .caption {
+  padding: 3px;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.post .postImg {
+  width: 100%;
+}
+.post .postImg img {
+  width: 100%;
+  height: auto;
+}
+.post .likecmtShare {
+  margin-top: 3px;
+  color: #8d8d8d;
+  margin-bottom: 3px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+.post .likewrap {
+  display: flex;
+  width: 60%;
+}
+.post .likewrap span {
+  margin-left: 8px;
+}
+.post .cmnrshareWrap {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.post .reactionBtns {
+  width: 100%;
+  display: flex;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.post .reactionBtns div {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 30%;
+  color: #8d8d8d;
+  height: 30px;
 }

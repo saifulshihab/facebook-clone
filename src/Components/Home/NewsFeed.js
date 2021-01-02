@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { myDay } from '../../DemoData';
+import { myDay, post } from '../../DemoData';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import PhotoIcon from '@material-ui/icons/Photo';
 import MoodIcon from '@material-ui/icons/Mood';
@@ -7,6 +7,7 @@ import { Modal } from '@material-ui/core';
 import PersonIcon from '@material-ui/icons/Person';
 import { Gif, LiveTv, Place } from '@material-ui/icons';
 import CloseIcon from '@material-ui/icons/Close';
+import Post from './Post';
 
 function Newsfeed() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -15,7 +16,6 @@ function Newsfeed() {
     setModalOpen(false);
   };
 
-  console.log(myDay);
   return (
     <>
       <div id='newsfeed'>
@@ -68,7 +68,11 @@ function Newsfeed() {
             </button>
           </div>
         </div>
-        <div className='posts'></div>
+        <div className='posts'>
+          {post.map((postData) => (
+            <Post key={postData.id} postData={postData} />
+          ))}
+        </div>
       </div>
       <Modal
         className='postModal'
