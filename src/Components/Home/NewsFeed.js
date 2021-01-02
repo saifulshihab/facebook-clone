@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { myDay } from '../../DemoData';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import PhotoIcon from '@material-ui/icons/Photo';
 import MoodIcon from '@material-ui/icons/Mood';
+import { Modal } from '@material-ui/core';
+import PersonIcon from '@material-ui/icons/Person';
+import { Gif, LiveTv, Place } from '@material-ui/icons';
+import CloseIcon from '@material-ui/icons/Close';
 
 function Newsfeed() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handlClose = () => {
+    setModalOpen(false);
+  };
+
   console.log(myDay);
   return (
     <>
@@ -37,7 +47,9 @@ function Newsfeed() {
               />
             </div>
             <div className='post_btn'>
-              <button>What's on your mind? John</button>
+              <button onClick={() => setModalOpen(true)}>
+                What's on your mind, John?
+              </button>
             </div>
           </div>
           <div className='middle_content'></div>
@@ -58,6 +70,60 @@ function Newsfeed() {
         </div>
         <div className='posts'></div>
       </div>
+      <Modal
+        className='postModal'
+        open={modalOpen}
+        onClose={handlClose}
+        aria-labelledby='simple-modal-title'
+        aria-describedby='simple-modal-description'
+      >
+        <div className='createPostBox'>
+          <div className='top'>
+            <div className='toptext'>
+              <h2>Create Post</h2>
+            </div>
+            <div className='clsbtn' onClick={handlClose}>
+              <CloseIcon />
+            </div>
+          </div>
+          <div className='user_details'>
+            <img src={require('../../assets/images/profile.JPG')} />
+            <div className='name_'>
+              <p>Saiful Islam Shihab</p>
+              <span>Friends</span>
+            </div>
+          </div>
+          <div className='input_box'>
+            <input placeholder="What's on your mind, Shihab?" />
+          </div>
+          <div className='addmorebox'>
+            <div className='left'>
+              <p>Add to Your Post</p>
+            </div>
+            <div className='right'>
+              <div className='icon'>
+                <PhotoIcon style={{ color: '#00c14d' }} />
+              </div>
+              <div className='icon'>
+                <PersonIcon style={{ color: 'rgb(42 141 255)' }} />
+              </div>
+              <div className='icon'>
+                <MoodIcon style={{ color: '#ffd400' }} />
+              </div>
+              <div className='icon'>
+                <Place style={{ color: '#ff4700' }} />
+              </div>
+              <div className='icon'>
+                <LiveTv style={{ color: 'red' }} />
+              </div>
+              <div className='icon'>
+                <Gif style={{ color: '#22b97a' }} />
+              </div>
+            </div>
+          </div>
+          <button className='postbtmbtn'>Post</button>
+        </div>
+      </Modal>
     </>
   );
 }
