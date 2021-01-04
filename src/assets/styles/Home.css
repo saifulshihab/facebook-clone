@@ -1,13 +1,14 @@
 .home_leftside,
 ._home_rightside {
   height: 100vh;
-  width: 40%;
+  width: 20%;
   margin-top: 2px;
   overflow-y: scroll;
   position: fixed;
 }
 ._home_rightside {
   float: right;
+  width: 40%;
 }
 ._home_rightside::-webkit-scrollbar,
 .home_leftside::-webkit-scrollbar {
@@ -21,4 +22,8 @@
 .home_leftside::-webkit-scrollbar-thumb {
   background-color: #ddd; /* color of the scroll thumb */
   border-radius: 20px; /* roundness of the scroll thumb */
+}
+.friend_req_div .buttons {
+  display: flex;
+  align-items: center;
 }

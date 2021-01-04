@@ -22,12 +22,12 @@ function Rightsidebar() {
 
   return (
     <>
-      <div className="_home_rightside">
+      <div className='_home_rightside'>
         <List
-          component="nav"
-          aria-labelledby="nested-list-subheader"
+          component='nav'
+          aria-labelledby='nested-list-subheader'
           subheader={
-            <ListSubheader component="div" id="nested-list-subheader">
+            <ListSubheader component='div' id='nested-list-subheader'>
               Your Pages
             </ListSubheader>
           }
@@ -36,56 +36,66 @@ function Rightsidebar() {
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/cT5nPnO8Wsc.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/yT/r/cT5nPnO8Wsc.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Night Fury Gaming" />
+            <ListItemText primary='Night Fury Gaming' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/DO-SN-shaZL.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/DO-SN-shaZL.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="DNC" />
+            <ListItemText primary='DNC' />
           </ListItem>
         </List>
         <Divider />
         <List
-          component="nav"
-          aria-labelledby="nested-list-subheader"
+          component='nav'
+          aria-labelledby='nested-list-subheader'
           subheader={
-            <ListSubheader component="div" id="nested-list-subheader">
+            <ListSubheader component='div' id='nested-list-subheader'>
               Friend Requests
             </ListSubheader>
           }
           className={classes.root}
         >
-          <div className="friend_req_div">
+          <div className='friend_req_div'>
             <ListItem button className={classes.nested}>
               <ListItemIcon>
                 <img
-                  src="https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/DO-SN-shaZL.png"
-                  alt="pages"
+                  src='https://static.xx.fbcdn.net/rsrc.php/v3/yQ/r/MN5ZSGIfEZ3.png'
+                  alt='pages'
                 />
               </ListItemIcon>
-              <ListItemText primary="Mark Zukerburg" />
-              <br/>
-              <div className="buttons">
-                <Button className="lb" color="primary" variant="contained" size="medium">Confirm</Button>
-                <Button color="primary" variant="outlined" size="medium">Delete</Button>
+              <ListItemText primary='Mark Zukerburg' />
+              <br />
+              <div className='buttons'>
+                <Button
+                  className='lb'
+                  color='primary'
+                  variant='contained'
+                  size='medium'
+                  style={{marginRight: 5}}
+                >
+                  Confirm
+                </Button>
+                <Button color='primary' variant='outlined' size='medium'>
+                  Delete
+                </Button>
               </div>
             </ListItem>
           </div>
         </List>
         <Divider />
         <List
-          component="nav"
-          aria-labelledby="nested-list-subheader"
+          component='nav'
+          aria-labelledby='nested-list-subheader'
           subheader={
-            <ListSubheader component="div" id="nested-list-subheader">
+            <ListSubheader component='div' id='nested-list-subheader'>
               Contacts
             </ListSubheader>
           }
@@ -94,199 +104,199 @@ function Rightsidebar() {
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
         </List>
         <Divider />
         <List
-          component="nav"
-          aria-labelledby="nested-list-subheader"
+          component='nav'
+          aria-labelledby='nested-list-subheader'
           subheader={
-            <ListSubheader component="div" id="nested-list-subheader">
+            <ListSubheader component='div' id='nested-list-subheader'>
               Group Coversation
             </ListSubheader>
           }
@@ -295,47 +305,47 @@ function Rightsidebar() {
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="The Coding Train" />
+            <ListItemText primary='The Coding Train' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Brad Traversy" />
+            <ListItemText primary='Brad Traversy' />
           </ListItem>
           <ListItem button className={classes.nested}>
             <ListItemIcon>
               <img
-                src="https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png"
-                alt="pages"
+                src='https://static.xx.fbcdn.net/rsrc.php/v3/y8/r/S0U5ECzYUSu.png'
+                alt='pages'
               />
             </ListItemIcon>
-            <ListItemText primary="Fireship.io" />
+            <ListItemText primary='Fireship.io' />
           </ListItem>
         </List>
       </div>
