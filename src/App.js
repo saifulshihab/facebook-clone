@@ -1,16 +1,13 @@
 import React from 'react';
-import './App.css';
-import './assets/styles/Home.css';
-import './assets/styles/NewsFeed.css';
-
+import './styles/main.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Main from './Components/MainComponent';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
-    <div>
+    <div className='w-screen h-screen bg-gray-100'>
       <Router>
-        <Main />
+        <Navbar />
       </Router>
     </div>
   );
