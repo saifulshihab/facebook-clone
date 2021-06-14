@@ -11,7 +11,7 @@ import HomeScreen from './Components/Home/HomeScreen';
 
 function App() {
   return (
-    <div className='w-screen min-h-screen bg-gray-100'>
+    <div className='w-screen h-full min-h-screen bg-gray-100'>
       <Navbar />
       <div className='w-full h-full bg-gray-100'>
         <Switch>
