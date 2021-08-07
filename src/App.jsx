@@ -11,17 +11,17 @@ import HomeScreen from './Components/Home/HomeScreen';
 
 function App() {
   return (
-    <div className='w-screen h-full min-h-screen bg-gray-100'>
+    <div className="w-screen h-full min-h-screen bg-gray-100">
       <Navbar />
-      <div className='w-full h-full bg-gray-100'>
+      <div className="w-full h-full bg-gray-100">
         <Switch>
-          <Route exact path='/' component={HomeScreen} />
-          <Route path='/watch' component={WatchScreen} />
-          <Route path='/marketplace' component={MarketPlaceScreen} />
-          <Route path='/gaming' component={GamingScreen} />
-          <Route path='/groups' component={GroupScreen} />
-          <Route path='/profile' component={ProfileScreen} />
-          <Redirect to='/' />
+          <Route exact path="/" component={HomeScreen} />
+          <Route path="/watch" component={WatchScreen} />
+          <Route path="/marketplace" component={MarketPlaceScreen} />
+          <Route path="/gaming" component={GamingScreen} />
+          <Route path="/groups" component={GroupScreen} />
+          <Route path="/profile" component={ProfileScreen} />
+          <Redirect to="/" />
         </Switch>
       </div>
     </div>

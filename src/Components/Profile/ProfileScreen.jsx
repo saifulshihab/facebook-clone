@@ -1,4 +1,5 @@
 import React from 'react';
+import CreatePostBox from '../Home/CreatePostBox';
 import PostContainer from '../Home/PostContainer';
 
 const ProfileScreen = () => {
@@ -191,52 +192,12 @@ const ProfileScreen = () => {
             </div>
           </div>
           <div className="col-span-3">
-            <div className="w-full rounded-lg bg-white flex flex-col mb-3 p-3 px-4 shadow">
-              <div className="flex items-center space-x-2 border-b pb-3 mb-2">
-                <div className="w-10 h-10">
-                  <img
-                    src="https://picsum.photos/200"
-                    className="w-full h-full rounded-full"
-                    alt="dp"
-                  />
-                </div>
-                <button className="hover:bg-gray-200 focus:bg-gray-300 focus:outline-none flex-grow bg-gray-100 text-gray-500 text-left pl-4 rounded-full h-10">
-                  What's on your mind, Shihab?
-                </button>
-              </div>
-              <div className="flex space-x-3">
-                <button className="flex-1 flex items-center h-10 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
-                  <div>
-                    <i className="text-2xl fab fa-youtube text-red-400"></i>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-500">Create Video</p>
-                  </div>
-                </button>
-                <button className="flex-1 flex items-center h-10 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
-                  <div>
-                    <i className="text-2xl fas fa-images text-green-500"></i>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-500">Photo/Video</p>
-                  </div>
-                </button>
-                <button className="flex-1 flex items-center h-10 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
-                  <div>
-                    <i className="text-2xl far fa-smile text-yellow-500"></i>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-500">
-                      Feeling/Activity
-                    </p>
-                  </div>
-                </button>
-              </div>
-            </div>
+            {/* Create post */}
+            <CreatePostBox />
 
             {/* post filter box */}
 
-            <div className="bg-white rounded-md shadow p-2 px-3">
+            <div className="bg-white rounded-md shadow p-2 mt-4 px-3">
               <div className="flex items-center justify-between pb-2 border-b">
                 <div>
                   <p className="text-xl text-gray-700 font-bold">Posts</p>

@@ -16,13 +16,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:tailwindcss": "postcss src/index.css -o src/styles/main.css",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "keywords": ["react", "facebook-clone", "facebook", "tailwindcss", "react-facebook-clone"],
+  "keywords": [
+    "react",
+    "facebook-clone",
+    "facebook",
+    "tailwindcss",
+    "react-facebook-clone"
+  ],
   "browserslist": {
     "production": [
       ">0.2%",
@@ -34,5 +41,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.1",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.3.2",
+    "tailwindcss": "^2.2.7"
   }
 }

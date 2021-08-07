@@ -31,7 +31,7 @@ const Post = () => {
           className='w-full h-76 max-h-80'
         />
       </div>
-      <div className='w-full flex flex-col space-y-2 p-3 px-4'>
+      <div className='w-full flex flex-col space-y-2 p-2 px-4'>
         <div className='flex items-center justify-between px-3 pb-2 mb-2 border-b'>
           <div className='flex items-center'>
             <div className='flex items-center text-gray-400 text-sm'>
@@ -54,7 +54,7 @@ const Post = () => {
           </div>
         </div>
         <div className='flex space-x-3 text-gray-400'>
-          <button className='flex-1 flex items-center h-6 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md'>
+          <button className='flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md'>
             <div>
               <i className='fas fa-thumbs-up'></i>
             </div>
@@ -62,7 +62,7 @@ const Post = () => {
               <p className='font-semibold text-sm'>Like</p>
             </div>
           </button>
-          <button className='flex-1 flex items-center h-6 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md'>
+          <button className='flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md'>
             <div>
               <i className='fas fa-comment'></i>
             </div>
@@ -70,7 +70,7 @@ const Post = () => {
               <p className='font-semibold text-sm'>Comment</p>
             </div>
           </button>
-          <button className='flex-1 flex items-center h-6 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md'>
+          <button className='flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md'>
             <div>
               <i className='fas fa-share'></i>
             </div>
