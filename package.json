@@ -1,52 +1,30 @@
 {
-  "name": "facebook",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-icons": "^3.11.0",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
-  },
+  "name": "facebook-clone",
+  "version": "1.0.0",
+  "description": "Facebook clone using React.js, Node.js, GraphQL & TypeScript",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "build:tailwindcss": "postcss src/index.css -o src/styles/main.css",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "postinstall": "husky install"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saifulshihab/facebook-clone.git"
   },
   "keywords": [
-    "react",
     "facebook-clone",
-    "facebook",
-    "tailwindcss",
-    "react-facebook-clone"
+    "react-facebook-clone",
+    "full-stack-facebook",
+    "react-graphql-facebook-clone"
   ],
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Saiful Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saifulshihab/facebook-clone/issues"
   },
+  "homepage": "https://github.com/saifulshihab/facebook-clone#readme",
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "postcss": "^8.3.6",
-    "postcss-cli": "^8.3.1",
-    "prettier": "^2.3.2",
-    "tailwindcss": "^2.2.7"
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "husky": "^7.0.4"
   }
 }

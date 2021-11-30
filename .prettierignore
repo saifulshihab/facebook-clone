@@ -1,3 +1,6 @@
-node_modules
+client/node_modules
+client/build
 
-build
+server/node_modules
+
+.prettierrc
