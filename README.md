@@ -1,4 +1,4 @@
-# facebook-ui-clone
+# facebook-clone
 
 Building Facebook Clone using React, Tailwind CSS, Node.js. GraphQL and TypeScript 🔥
 
