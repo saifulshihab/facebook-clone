@@ -1,8 +1,8 @@
 import React from 'react';
-import CreatePostBox from '../Home/CreatePostBox';
-import PostContainer from '../Home/PostContainer';
+import PostContainer from '../../container/PostContainer';
+import CreatePostBox from '../../limb/post/CreatePostBox';
 
-const ProfileScreen: React.FC = () => {
+const ProfilePage: React.FC = () => {
   return (
     <div className="w-full h-full">
       <div className="w-full h-auto shadow bg-white">
@@ -231,4 +231,4 @@ const ProfileScreen: React.FC = () => {
   );
 };
 
-export default ProfileScreen;
+export default ProfilePage;

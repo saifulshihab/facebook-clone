@@ -1,9 +1,9 @@
 import React from 'react';
-import CreatePostBox from './CreatePostBox';
-import PostContainer from './PostContainer';
-import Story from './Story';
+import CreatePostBox from '../../limb/post/CreatePostBox';
+import PostContainer from '../../container/PostContainer';
+import Story from '../../limb/story';
 
-const NewsFeedScreen: React.FC = () => {
+const NewsFeed: React.FC = () => {
   return (
     <div className="mt-6 w-full h-full pb-5">
       {/* Story Section */}
@@ -37,4 +37,4 @@ const NewsFeedScreen: React.FC = () => {
   );
 };
 
-export default NewsFeedScreen;
+export default NewsFeed;
