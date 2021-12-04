@@ -11,6 +11,7 @@ import LoginPage from '../components/pages/login';
 import MarketplacePage from '../components/pages/marketplace';
 import PageNotFound from '../components/pages/notfound';
 import ProfilePage from '../components/pages/profile';
+import RegisterPage from '../components/pages/signup';
 import WatchPage from '../components/pages/watch';
 import { PrivateRoute } from './PrivateRoute';
 
@@ -49,6 +50,7 @@ const Routers: React.FC = () => {
           layout={ProfilePageLayout}
         />
         <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
         <Route path="*" component={PageNotFound} />
       </Switch>
     </BrowserRouter>

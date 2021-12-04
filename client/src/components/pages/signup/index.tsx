@@ -3,9 +3,8 @@ import React from 'react';
 import Button from '../../limb/button/Button';
 import { TextInput } from '../../limb/input/TextInput';
 import * as yup from 'yup';
-import { Link } from 'react-router-dom';
 
-const LoginPage: React.FC = () => {
+const RegisterPage: React.FC = () => {
   const fieldValidationSchema = yup.object({
     emailOrPhone: yup.string().required('Email or phone required'),
     password: yup.string().required('Password required'),
@@ -19,9 +18,7 @@ const LoginPage: React.FC = () => {
             emailOrPhone: '',
             password: '',
           }}
-          onSubmit={() => {
-            // console.log(values);
-          }}
+          onSubmit={() => {}}
           validationSchema={fieldValidationSchema}
         >
           {({ handleSubmit }) => (
@@ -45,27 +42,14 @@ const LoginPage: React.FC = () => {
                 fontSize="text-xl"
                 fontWeight="font-bold"
               >
-                Login
+                Register
               </Button>
-              <div className="mt-2 text-center pb-3 border-b border-gray-300">
-                <p className="text-primary cursor-pointer underline">
-                  Forgot password?
-                </p>
-              </div>
             </form>
           )}
         </Formik>
-
-        <div className="mt-5 text-center">
-          <Link to="/register">
-            <Button size="large" bg="bg-greenLight" fontSize="text-xl">
-              Create New Account
-            </Button>
-          </Link>
-        </div>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default RegisterPage;
