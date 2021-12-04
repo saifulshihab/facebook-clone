@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GamingPageLayout from '../components/layouts/GamingPageLayout';
 import HomePageLayout from '../components/layouts/HomePageLayout';
 import MarketplacePageLayout from '../components/layouts/MarketplacePage';
@@ -7,13 +7,12 @@ import ProfilePageLayout from '../components/layouts/ProfilePageLayout';
 import WatchPageLayout from '../components/layouts/WatchPageLayout';
 import GamingPage from '../components/pages/gaming';
 import HomePage from '../components/pages/home';
+import LoginPage from '../components/pages/login';
 import MarketplacePage from '../components/pages/marketplace';
+import PageNotFound from '../components/pages/notfound';
 import ProfilePage from '../components/pages/profile';
 import WatchPage from '../components/pages/watch';
 import { PrivateRoute } from './PrivateRoute';
-import { Route } from 'react-router-dom';
-import LoginPage from '../components/pages/login';
-import PageNotFound from '../components/pages/notfound';
 
 const Routers: React.FC = () => {
   return (
