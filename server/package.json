@@ -10,8 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@typegoose/typegoose": "^9.2.0",
+    "apollo-server-express": "^3.5.0",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "graphql": "15.3.0",
+    "mongoose": "^6.0.14",
+    "pg": "^8.7.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.2.41"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
