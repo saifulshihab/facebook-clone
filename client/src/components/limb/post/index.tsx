@@ -38,7 +38,7 @@ const Post: React.FC = () => {
               <button className="focus:outline-none flex items-center justify-center w-4 h-4 rounded-full bg-red-500 text-white">
                 <i style={{ fontSize: 10 }} className="fas fa-heart"></i>
               </button>
-              <button className="focus:outline-none flex items-center justify-center w-4 h-4 rounded-full bg-blue-500 text-white">
+              <button className="focus:outline-none flex items-center justify-center w-4 h-4 rounded-full bg-primary text-white">
                 <i style={{ fontSize: 10 }} className="fas fa-thumbs-up"></i>
               </button>
               <button className="focus:outline-none flex items-center justify-center w-4 h-4 rounded-full bg-yellow-500 text-white">
