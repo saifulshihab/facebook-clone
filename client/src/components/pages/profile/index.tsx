@@ -5,8 +5,8 @@ import CreatePostBox from '../../limb/post/CreatePostBox';
 const ProfilePage: React.FC = () => {
   return (
     <div className="w-full h-full">
-      <div className="w-full h-auto shadow bg-white">
-        <div className="max-w-6xl h-full mx-auto bg-white mt-2">
+      <div className="w-full h-auto shadow bg-white rounded-md">
+        <div className="max-w-6xl h-full mx-auto bg-white mt-2 p-2">
           <div
             className="h-96 max-h-96 w-full rounded-lg relative"
             style={{

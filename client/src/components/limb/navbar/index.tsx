@@ -5,7 +5,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const pathName = location?.pathname.split('/')[1];
   return (
-    <div className="w-full h-14 bg-white grid grid-cols-7 gap-4">
+    <div className="w-full h-14 bg-white grid grid-cols-7 gap-4 fixed z-50">
       <div className="col-span-2 flex items-center">
         <div className="flex items-center ml-2">
           <div className="h-10 text-primary">
