@@ -35,6 +35,9 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "engines": {
+    "node": ">=14.17.0"
+  },
   "keywords": [
     "react",
     "facebook-clone",
