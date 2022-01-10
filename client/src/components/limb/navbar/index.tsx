@@ -5,10 +5,10 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const pathName = location?.pathname.split('/')[1];
   return (
-    <div className="w-full h-14 bg-white grid grid-cols-7 gap-4">
+    <div className="w-full h-14 bg-white grid grid-cols-7 gap-4 fixed z-50">
       <div className="col-span-2 flex items-center">
         <div className="flex items-center ml-2">
-          <div className="h-10 text-blue-500">
+          <div className="h-10 text-primary">
             <Link to="/">
               <i className="fab fa-facebook" style={{ fontSize: 40 }}></i>
             </Link>
@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
               <div
                 className={`${
                   pathName === '' || undefined
-                    ? 'text-blue-500'
+                    ? 'text-primary'
                     : 'text-gray-400'
                 }`}
               >
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
               </div>
               <div
                 className={`${
-                  pathName === 'watch' ? 'text-blue-500' : 'text-gray-400'
+                  pathName === 'watch' ? 'text-primary' : 'text-gray-400'
                 }`}
               >
                 <i className="text-2xl fas fa-tv"></i>
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
               </div>
               <div
                 className={`${
-                  pathName === 'marketplace' ? 'text-blue-500' : 'text-gray-400'
+                  pathName === 'marketplace' ? 'text-primary' : 'text-gray-400'
                 }`}
               >
                 <i className="text-2xl fas fa-store"></i>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
               </div>
               <div
                 className={`${
-                  pathName === 'groups' ? 'text-blue-500' : 'text-gray-400'
+                  pathName === 'groups' ? 'text-primary' : 'text-gray-400'
                 }`}
               >
                 <i className="text-2xl fas fa-users"></i>
@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
               </div>
               <div
                 className={`${
-                  pathName === 'gaming' ? 'text-blue-500' : 'text-gray-400'
+                  pathName === 'gaming' ? 'text-primary' : 'text-gray-400'
                 }`}
               >
                 <i className="text-2xl fas fa-gamepad"></i>

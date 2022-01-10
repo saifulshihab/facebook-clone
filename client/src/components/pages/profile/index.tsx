@@ -5,8 +5,8 @@ import CreatePostBox from '../../limb/post/CreatePostBox';
 const ProfilePage: React.FC = () => {
   return (
     <div className="w-full h-full">
-      <div className="w-full h-auto shadow bg-white">
-        <div className="max-w-6xl h-full mx-auto bg-white mt-2">
+      <div className="w-full h-auto shadow bg-white rounded-md">
+        <div className="max-w-6xl h-full mx-auto bg-white mt-2 p-2">
           <div
             className="h-96 max-h-96 w-full rounded-lg relative"
             style={{
@@ -58,7 +58,7 @@ const ProfilePage: React.FC = () => {
                 </button>
               </div>
               <div className="flex items-center space-x-2">
-                <button className="px-3 py-1.5 rounded-md bg-blue-500 hover:bg-blue-600 text-white font-semibold focus:outline-none">
+                <button className="px-3 py-1.5 rounded-md bg-primary hover:bg-blue-600 text-white font-semibold focus:outline-none">
                   <i className="fas fa-plus-circle  mr-2"></i>Add to Story
                 </button>
                 <button className="px-3 py-1.5 bg-gray-200 hover:bg-gray-300 rounded-md font-semibold focus:outline-none">

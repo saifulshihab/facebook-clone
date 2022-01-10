@@ -16,7 +16,7 @@ const NewsFeed: React.FC = () => {
             className="w-full absolute flex justify-center"
             style={{ bottom: '13%' }}
           >
-            <button className="focus:outline-none z-40 w-10 h-10 bg-blue-500 rounded-full border-4 border-white">
+            <button className="focus:outline-none z-40 w-10 h-10 bg-primary rounded-full border-4 border-white">
               <i className="text-white fas fa-plus"></i>
             </button>
           </div>

@@ -1,12 +1,13 @@
 import React from 'react';
+import MainContentContainer from '../common';
 import Navbar from '../limb/navbar';
 
 const MarketplacePageLayout: React.FC = (props) => {
   const { children } = props;
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full flex flex-col">
       <Navbar />
-      {children}
+      <MainContentContainer>{children}</MainContentContainer>
     </div>
   );
 };

@@ -8,7 +8,7 @@ Building Facebook Clone using React, Tailwind CSS, Node.js. GraphQL and TypeScri
 
 ##### Client Side
 ```javascript
-cd /client
+cd client
 yarn install  // install all packages
 yarn build:tailwindcss  // generate tailwindcss
 yarn start  // run project
