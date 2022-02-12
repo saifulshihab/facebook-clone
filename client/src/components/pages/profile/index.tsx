@@ -6,7 +6,7 @@ const ProfilePage: React.FC = () => {
   return (
     <div className="w-full h-full">
       <div className="w-full h-auto shadow bg-white rounded-md">
-        <div className="max-w-6xl h-full mx-auto bg-white mt-2 p-2">
+        <div className="max-w-6xl h-full mx-auto bg-white p-2">
           <div
             className="h-96 max-h-96 w-full rounded-lg relative"
             style={{
@@ -73,7 +73,7 @@ const ProfilePage: React.FC = () => {
         </div>
       </div>
       {/* After bio content */}
-      <div className="max-w-6xl h-full mx-auto mt-2">
+      <div className="max-w-6xl h-full mx-auto my-3">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-2">
             <div className="bg-white rounded-lg p-3 text-sm text-gray-600 shadow">
@@ -194,10 +194,8 @@ const ProfilePage: React.FC = () => {
           <div className="col-span-3">
             {/* Create post */}
             <CreatePostBox />
-
             {/* post filter box */}
-
-            <div className="bg-white rounded-md shadow p-2 mt-4 px-3">
+            <div className="bg-white rounded-md shadow p-2 mt-4 px-3 text-sm">
               <div className="flex items-center justify-between pb-2 border-b">
                 <div>
                   <p className="text-xl text-gray-700 font-bold">Posts</p>
@@ -211,7 +209,7 @@ const ProfilePage: React.FC = () => {
                   </button>
                 </div>
               </div>
-              <div className="flex space-x-3 text-gray-500 mt-1">
+              <div className="flex space-x-3 text-gray-500 mt-1 -mb-1">
                 <button className="font-semibold flex-1 h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
                   <i className="fas fa-bars mr-2"></i>List View
                 </button>

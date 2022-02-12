@@ -7,7 +7,7 @@ const NewsFeed: React.FC = () => {
   return (
     <div className="mt-6 w-full h-full pb-5">
       {/* Story Section */}
-      <div className="w-full h-50 flex items-center justify-center space-x-2 overflow-hidden cursor-pointer">
+      <div className="w-full h-50 flex items-center justify-center space-x-2 overflow-hidden cursor-pointer my-6">
         <div
           className="w-28 h-48 relative rounded-xl shadow "
           style={{ backgroundImage: `url('https://picsum.photos/400')` }}
