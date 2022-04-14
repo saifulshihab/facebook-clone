@@ -2,6 +2,7 @@ import React from 'react';
 import CreatePostBox from '../../limb/post/CreatePostBox';
 import PostContainer from '../../container/PostContainer';
 import Story from '../../limb/story';
+import { storiesData } from '../../../database';
 
 const NewsFeed: React.FC = () => {
   return (
@@ -24,10 +25,9 @@ const NewsFeed: React.FC = () => {
             <p className="text-gray-500 text-sm font-semibold">Create Story</p>
           </div>
         </div>
-        <Story />
-        <Story />
-        <Story />
-        <Story />
+        {storiesData.length
+          ? storiesData.map((story, idx) => <Story key={idx} story={story} />)
+          : null}
       </div>
       {/* Create Post       */}
       <CreatePostBox />

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { TPostView } from '../../../types/post';
 import PostContainer from '../../container/PostContainer';
 import CreatePostBox from '../../limb/post/CreatePostBox';
 
 const ProfilePage: React.FC = () => {
+  const [postsView, setPostsView] = useState<TPostView>('listView');
   return (
     <div className="w-full h-full">
       <div className="w-full h-auto shadow bg-white rounded-md">
@@ -10,7 +12,10 @@ const ProfilePage: React.FC = () => {
           <div
             className="h-96 max-h-96 w-full rounded-lg relative"
             style={{
-              backgroundImage: `url('https://picsum.photos/720')`,
+              backgroundImage: `url('https://picsum.photos/2440/2048')`,
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
             }}
           >
             <div
@@ -20,7 +25,7 @@ const ProfilePage: React.FC = () => {
               <div className="w-44 h-44 rounded-full bg-gray-300 border-4 border-white">
                 <img
                   className="w-full h-full rounded-full"
-                  src="https://picsum.photos/200"
+                  src="https://picsum.photos/500"
                   alt="dp"
                 />
               </div>
@@ -34,7 +39,7 @@ const ProfilePage: React.FC = () => {
           <div className="max-w-5xl h-full mx-auto">
             <div className="flex flex-col space-y-2 mt-3 items-center justify-center pb-3 border-b-2">
               <p className="text-4xl font-bold">Saiful Islam Shihab</p>
-              <p className="text-sm text-gray-500">I am Software Engineer</p>
+              <p className="text-sm text-gray-500">Software Engineer</p>
             </div>
             <div className="mt-1 flex items-center justify-between">
               <div className="flex mb-2 items-center space-x-2">
@@ -210,18 +215,27 @@ const ProfilePage: React.FC = () => {
                 </div>
               </div>
               <div className="flex space-x-3 text-gray-500 mt-1 -mb-1">
-                <button className="font-semibold flex-1 h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
+                <button
+                  className={`font-semibold flex-1 h-8 focus:outline-none justify-center space-x-2 hover:bg-gray-100 rounded-md ${
+                    postsView === 'listView' ? 'bg-gray-200' : undefined
+                  }`}
+                  onClick={() => setPostsView('listView')}
+                >
                   <i className="fas fa-bars mr-2"></i>List View
                 </button>
-                <button className="font-semibold flex-1 h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
+                <button
+                  className={`font-semibold flex-1 h-8 focus:outline-none justify-center space-x-2 hover:bg-gray-100 rounded-md  ${
+                    postsView === 'gridView' ? 'bg-gray-200' : undefined
+                  }`}
+                  onClick={() => setPostsView('gridView')}
+                >
                   <i className="fas fa-th-large mr-2"></i>Grid View
                 </button>
               </div>
             </div>
 
             {/* user posts */}
-
-            <PostContainer />
+            <PostContainer postsView={postsView} />
           </div>
         </div>
       </div>

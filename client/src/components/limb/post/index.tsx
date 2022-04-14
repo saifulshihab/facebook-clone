@@ -1,19 +1,24 @@
 import React from 'react';
+import { IPost } from '../../../types/post';
+import moment from 'moment';
+interface IProps {
+  post: IPost;
+}
 
-const Post: React.FC = () => {
+const Post: React.FC<IProps> = (props) => {
+  const { post } = props;
+  const { user } = post;
   return (
-    <div className="w-full shadow h-auto bg-white my-2 rounded-md">
+    <div className="w-full shadow h-auto bg-white rounded-md">
       <div className="flex items-center space-x-2 p-2.5 px-4">
         <div className="w-10 h-10">
-          <img
-            src="https://picsum.photos/200"
-            className="w-full h-full rounded-full"
-            alt="dp"
-          />
+          <img src={user.dp} className="w-full h-full rounded-full" alt="dp" />
         </div>
         <div className="flex-grow flex flex-col">
-          <p className="font-semibold text-sm text-gray-700">Saiful Islam</p>
-          <span className="text-xs font-thin text-gray-400">2d</span>
+          <p className="font-semibold text-sm text-gray-700">{user.fullname}</p>
+          <span className="text-xs font-thin text-gray-400">
+            {moment(post.createdAt).fromNow()}
+          </span>
         </div>
         <div className="w-8 h-8">
           <button className="w-full h-full hover:bg-gray-100 rounded-full text-gray-400 focus:outline-none">
@@ -21,20 +26,23 @@ const Post: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="mb-1">
-        <p className="text-gray-700 max-h-10 truncate px-3 text-sm">
-          Lorem Ipsum has been the industry&apos;s standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type
-        </p>
-      </div>
-      <div className="w-full h-76 max-h-80">
-        <img
-          src="https://picsum.photos/1080/1920"
-          alt="postimage"
-          className="w-full h-76 max-h-80"
-        />
-      </div>
+      {post.caption ? (
+        <div className="mb-1">
+          <p className="text-gray-700 max-h-10 truncate px-3 text-sm">
+            {post.caption}
+          </p>
+        </div>
+      ) : null}
+      {post.image ? (
+        <div className="w-full h-76 max-h-80">
+          <img
+            src={post.image}
+            alt="postimage"
+            className="w-full h-76 max-h-80"
+          />
+        </div>
+      ) : null}
+
       <div className="w-full flex flex-col space-y-2 p-2 px-4">
         <div className="flex items-center justify-between pb-2 border-b border-gray-300 text-gray-500 text-sm">
           <div className="flex items-center">
@@ -49,13 +57,13 @@ const Post: React.FC = () => {
                 <i style={{ fontSize: 10 }} className="fas fa-surprise"></i>
               </button>
               <div className="ml-1">
-                <p>130K</p>
+                <p>{post.likes}</p>
               </div>
             </button>
           </div>
           <div className="flex items-center space-x-2">
-            <button>1.2K Comments</button>
-            <button>9 Shares</button>
+            <button>{post.comments} Comments</button>
+            <button>{post.shares} Shares</button>
           </div>
         </div>
         <div className="flex space-x-3 text-gray-500 text-sm font-thin">
