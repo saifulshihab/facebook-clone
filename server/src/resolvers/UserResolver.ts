@@ -1,6 +1,15 @@
-/* eslint-disable indent */
-import { Arg, Field, InputType, Mutation, Query, Resolver } from 'type-graphql';
+import bcrypt from 'bcryptjs';
+import {
+  Arg,
+  Field,
+  InputType,
+  Mutation,
+  ObjectType,
+  Query,
+  Resolver,
+} from 'type-graphql';
 import { User } from '../models/User';
+import { ICommonErrors } from '../types';
 
 @InputType()
 class UsernamePasswordInput {
@@ -11,27 +20,46 @@ class UsernamePasswordInput {
   password!: string;
 }
 
+@ObjectType()
+class UserRegistrationResponse {
+  @Field(() => User, { nullable: true })
+  user?: User;
+
+  @Field(() => ICommonErrors, { nullable: true })
+  errors?: ICommonErrors;
+}
+
 @Resolver()
 export class UserResolver {
-  @Query(() => String)
-  hello(): string {
-    return 'World';
-  }
-
   @Query(() => [User])
-  async users() {
+  async users(): Promise<User[]> {
     return User.find({});
   }
 
-  @Mutation(() => User)
+  @Mutation(() => UserRegistrationResponse)
   async register(
-    @Arg('options') options: UsernamePasswordInput
-  ): Promise<User> {
+    @Arg('inputs') inputs: UsernamePasswordInput
+  ): Promise<UserRegistrationResponse> {
+    const { email, password } = inputs;
+
+    const userWithEmail = await User.findOne({ email });
+
+    if (userWithEmail) {
+      return {
+        errors: {
+          message: 'Email is registerd',
+        },
+      };
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const passwordHashed = await bcrypt.hash(password, salt);
+
     const newUser = await User.create({
-      email: options.email,
-      password: options.password,
+      email,
+      password: passwordHashed,
     }).save();
 
-    return newUser;
+    return { user: newUser };
   }
 }

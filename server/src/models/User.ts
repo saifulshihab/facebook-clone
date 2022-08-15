@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import { Field, ObjectType } from 'type-graphql';
 import {
   BaseEntity,
@@ -14,82 +13,80 @@ type TInterest = 'men' | 'women';
 type TReligion = 'islam' | 'hindu' | 'christian';
 
 @ObjectType()
+@Entity()
 class IEducation {
   @Field()
+  @Column()
   institute!: string;
 
   @Field({ nullable: true })
+  @Column({ nullable: true })
   concentration!: string;
 
-  @Field(() => Date)
+  @Field(() => Date, { nullable: true })
+  @Column({ nullable: true })
   from!: Date;
 
   @Field(() => Date, { nullable: true })
+  @Column({ nullable: true })
   to!: Date;
 
   @Field({ nullable: true })
+  @Column({ nullable: true })
   present!: boolean;
 
   @Field({ nullable: true })
+  @Column({ nullable: true })
   description!: string;
 }
 
 @ObjectType()
+@Entity()
 class IWork {
   @Field()
+  @Column()
   company!: string;
 
   @Field()
+  @Column()
   position!: string;
 
   @Field({ nullable: true })
+  @Column({ nullable: true })
   from!: Date;
 
   @Field({ nullable: true })
+  @Column({ nullable: true })
   to!: Date;
 
   @Field({ nullable: true })
+  @Column({ nullable: true })
   present!: boolean;
 
   @Field({ nullable: true })
+  @Column({ nullable: true })
   description!: string;
 }
 
 @ObjectType()
+@Entity()
 class ISocial {
   @Field()
+  @Column()
   platform!: TSocialPlatform;
 
   @Field()
+  @Column()
   link!: string;
 }
 
 @ObjectType()
+@Entity()
 class IWebsite {
   @Field()
+  @Column()
   link!: string;
 }
-
-// interface IUser {
-//   fullname: string;
-//   username: string;
-//   email: string;
-//   password: string;
-//   bio: string;
-//   dp: string;
-//   cover: string;
-//   hometown: string;
-//   currentCity: string;
-//   relationship: string;
-//   work: [IWork];
-//   education: [IEducation];
-//   website: [IWebsite];
-//   social: [ISocial];
-//   phone: string;
-//   gender: IGender;
-//   interest: IInterest;
-//   religion: IReligion;
-// }
 
 @ObjectType()
 @Entity()
@@ -98,63 +95,63 @@ export class User extends BaseEntity {
   @PrimaryGeneratedColumn()
   public readonly id!: number;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   fullname!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ unique: true, nullable: true })
   username!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ unique: true, nullable: true })
   email!: string;
+
+  @Field({ nullable: true })
+  @Column({ unique: true, nullable: true })
+  phone!: string;
 
   @Field()
   @Column()
   password!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   bio!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   dp!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   cover!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   hometown!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   currentCity!: string;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   relationship!: string;
 
-  @Field()
-  @Column({ nullable: true })
-  phone!: string;
-
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   gender!: TGender;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   interest!: TInterest;
 
-  @Field()
+  @Field({ nullable: true })
   @Column({ nullable: true })
   religion!: TReligion;
 
-  @Field(() => [IWork])
+  @Field(() => [IWork], { nullable: true })
   @Column('json', { array: true, nullable: true })
   work!: {
     company: string;
@@ -165,7 +162,7 @@ export class User extends BaseEntity {
     description?: string;
   };
 
-  @Field(() => [IEducation])
+  @Field(() => [IEducation], { nullable: true })
   @Column('json', { array: true, nullable: true })
   education!: {
     institute: string;
@@ -176,20 +173,20 @@ export class User extends BaseEntity {
     description?: string;
   };
 
-  @Field(() => [IWebsite])
+  @Field(() => [IWebsite], { nullable: true })
   @Column('json', { array: true, nullable: true })
   website!: {
     platform: TSocialPlatform;
     link: string;
   };
 
-  @Field(() => [ISocial])
+  @Field(() => [ISocial], { nullable: true })
   @Column('json', { array: true, nullable: true })
   social!: {
     link: string;
   };
 
-  @Field()
+  @Field({ nullable: true })
   @CreateDateColumn({ nullable: true })
   createdAt!: Date;
 }

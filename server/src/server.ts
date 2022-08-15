@@ -36,6 +36,10 @@ async function main() {
       );
     }
 
+    process.on('unhandledRejection', (error: any) => {
+      throw new Error(error);
+    });
+
     const app = express();
     const httpServer = http.createServer(app);
 
@@ -62,8 +66,8 @@ async function main() {
     // app.listen(PORT, () => {
     console.log(`facebook-clone-server running on port ${PORT} 🚀🚀🚀`);
     // });
-  } catch (error) {
-    console.error(error);
+  } catch (error: any) {
+    throw new Error(error);
   }
 }
 
