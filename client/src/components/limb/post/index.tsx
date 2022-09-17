@@ -34,11 +34,11 @@ const Post: React.FC<IProps> = (props) => {
         </div>
       ) : null}
       {post.image ? (
-        <div className="w-full h-76 max-h-80">
+        <div className="w-full h-76 max-h-100">
           <img
             src={post.image}
             alt="postimage"
-            className="w-full h-76 max-h-80"
+            className="w-full h-76 max-h-100 object-cover"
           />
         </div>
       ) : null}
