@@ -47,7 +47,7 @@ export class UserResolver {
     if (userWithEmail) {
       return {
         errors: {
-          message: 'Email is registerd',
+          message: 'Email is registered',
         },
       };
     }

@@ -11,7 +11,9 @@ const NewsFeed: React.FC = () => {
       <div className="w-full h-50 flex items-center justify-center space-x-2 overflow-hidden cursor-pointer my-6">
         <div
           className="w-28 h-48 relative rounded-xl shadow "
-          style={{ backgroundImage: `url('https://picsum.photos/400')` }}
+          style={{
+            backgroundImage: `url('https://random.imagecdn.app/500/400')`,
+          }}
         >
           <div
             className="w-full absolute flex justify-center"

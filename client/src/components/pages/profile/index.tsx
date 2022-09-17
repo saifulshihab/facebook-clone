@@ -12,7 +12,7 @@ const ProfilePage: React.FC = () => {
           <div
             className="h-96 max-h-96 w-full rounded-lg relative"
             style={{
-              backgroundImage: `url('https://picsum.photos/2440/2048')`,
+              backgroundImage: `url('https://random.imagecdn.app/1920/1080')`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
@@ -25,7 +25,7 @@ const ProfilePage: React.FC = () => {
               <div className="w-44 h-44 rounded-full bg-gray-300 border-4 border-white">
                 <img
                   className="w-full h-full rounded-full"
-                  src="https://picsum.photos/500"
+                  src="https://random.imagecdn.app/250/250"
                   alt="dp"
                 />
               </div>

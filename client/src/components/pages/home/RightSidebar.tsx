@@ -55,78 +55,25 @@ const RightSidebar: React.FC = () => {
         </div>
         <div className="-ml-2">
           <ul className="w-full text-gray-600">
-            <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
-              <div>
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://picsum.photos/200"
-                  alt="user"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">Saiful Islam Shihab</p>
-              </div>
-            </li>
-            <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
-              <div>
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://picsum.photos/200"
-                  alt="user"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">Travarsy Media</p>
-              </div>
-            </li>
-            <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
-              <div>
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://picsum.photos/200"
-                  alt="user"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">Ben Awad</p>
-              </div>
-            </li>
-            <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
-              <div>
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://picsum.photos/200"
-                  alt="user"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">Fireship io</p>
-              </div>
-            </li>
-            <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
-              <div>
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://picsum.photos/200"
-                  alt="user"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">Shihab md</p>
-              </div>
-            </li>
-            <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
-              <div>
-                <img
-                  className="w-8 h-8 rounded-full"
-                  src="https://picsum.photos/200"
-                  alt="user"
-                />
-              </div>
-              <div>
-                <p className="text-sm font-semibold">Groups</p>
-              </div>
-            </li>
+            {Array(6)
+              .fill(0)
+              .map((_, idx) => (
+                <li
+                  key={idx}
+                  className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200"
+                >
+                  <div>
+                    <img
+                      className="w-8 h-8 rounded-full"
+                      src={`https://random.imagecdn.app/200/${200 + idx}`}
+                      alt="user"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold">Saiful Islam Shihab</p>
+                  </div>
+                </li>
+              ))}
           </ul>
         </div>
       </div>

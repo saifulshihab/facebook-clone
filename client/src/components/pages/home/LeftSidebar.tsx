@@ -8,7 +8,7 @@ const LeftSidebar: React.FC = () => {
           <div>
             <img
               className="w-8 h-8 rounded-full"
-              src="https://picsum.photos/200"
+              src="https://random.imagecdn.app/200/200"
               alt="user"
             />
           </div>
@@ -21,7 +21,7 @@ const LeftSidebar: React.FC = () => {
             <img
               className="w-8 h-8 rounded-full"
               src="https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/tInzwsw2pVX.png"
-              alt="user"
+              alt="info"
             />
           </div>
           <div>
@@ -33,7 +33,7 @@ const LeftSidebar: React.FC = () => {
             <img
               className="w-8 h-8 rounded-full"
               src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
-              alt="user"
+              alt="friends"
             />
           </div>
           <div>
@@ -44,8 +44,8 @@ const LeftSidebar: React.FC = () => {
           <div>
             <img
               className="w-8 h-8 rounded-full"
-              src="https://static.xx.fbcdn.net/rsrc.php/v3/yf/r/GA7Y4WRJMp8.png"
-              alt="user"
+              src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
+              alt="memories"
             />
           </div>
           <div>
@@ -57,7 +57,7 @@ const LeftSidebar: React.FC = () => {
             <img
               className="w-8 h-8 rounded-full"
               src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png"
-              alt="user"
+              alt="pages"
             />
           </div>
           <div>
@@ -69,7 +69,7 @@ const LeftSidebar: React.FC = () => {
             <img
               className="w-8 h-8 rounded-full"
               src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
-              alt="user"
+              alt="groups"
             />
           </div>
           <div>

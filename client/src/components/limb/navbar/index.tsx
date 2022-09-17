@@ -108,7 +108,7 @@ const Navbar: React.FC = () => {
             <button className="h-10 px-2 flex space-x-1 items-center justify-center focus:outline-none hover:bg-gray-300 rounded-full">
               <div className="h-8">
                 <img
-                  src="https://picsum.photos/200"
+                  src="https://random.imagecdn.app/200/200"
                   className="w-8 h-8 rounded-full"
                   alt="dp"
                 />

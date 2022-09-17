@@ -6,7 +6,7 @@ const CreatePostBox: React.FC = () => {
       <div className="flex items-center space-x-2 border-b pb-3 mb-2">
         <div className="w-10 h-10">
           <img
-            src="https://picsum.photos/200"
+            src="https://random.imagecdn.app/200/200"
             className="w-full h-full rounded-full"
             alt="dp"
           />
