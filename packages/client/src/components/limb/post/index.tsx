@@ -46,7 +46,7 @@ const Post: React.FC<IProps> = (props) => {
       <div className="w-full flex flex-col space-y-2 p-2 px-4">
         <div className="flex items-center justify-between pb-2 border-b border-gray-300 text-gray-500 text-sm">
           <div className="flex items-center">
-            <button className="flex items-center">
+            <div className="flex items-center">
               <button className="focus:outline-none flex items-center justify-center w-4 h-4 rounded-full bg-red-500 text-white">
                 <i style={{ fontSize: 10 }} className="fas fa-heart"></i>
               </button>
@@ -59,7 +59,7 @@ const Post: React.FC<IProps> = (props) => {
               <div className="ml-1">
                 <p>{post.likes}</p>
               </div>
-            </button>
+            </div>
           </div>
           <div className="flex items-center space-x-2">
             <button>{post.comments} Comments</button>

@@ -1,6 +1,10 @@
 import React from 'react';
 
-const MainContentContainer: React.FC = (props) => {
+interface IProps {
+  children?: React.ReactNode;
+}
+
+const MainContentContainer: React.FC<IProps> = (props) => {
   const { children } = props;
   return (
     <div

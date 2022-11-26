@@ -1,37 +1,26 @@
-import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import React, { ElementType, PropsWithChildren } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
+import { LOGIN } from './routes';
 
 interface IProps {
-  component: any;
-  layout: any;
-  exact: boolean;
-  path: string;
+  layout: ElementType;
 }
 
-const PrivateRoute: React.FC<IProps> = ({
-  component: Component,
-  layout: Layout,
-  ...rest
-}) => {
+const PrivateRoute: React.FC<PropsWithChildren<IProps>> = (props) => {
+  const { children, layout: Layout } = props;
+  const { pathname } = useLocation();
+
   const isAuthenticated = true;
 
-  return (
-    <Route
-      exact={rest.exact}
-      path={rest.path}
-      render={(props) =>
-        isAuthenticated === null ? null : isAuthenticated === true ? (
-          <Layout>
-            <Component {...props} />
-          </Layout>
-        ) : (
-          <Redirect
-            to={{
-              pathname: '/login',
-            }}
-          />
-        )
-      }
+  return isAuthenticated ? (
+    <Layout>{children}</Layout>
+  ) : (
+    <Navigate
+      to={{
+        pathname: LOGIN,
+        search:
+          pathname && pathname !== '/' ? `?redirect=${pathname}` : undefined,
+      }}
     />
   );
 };
