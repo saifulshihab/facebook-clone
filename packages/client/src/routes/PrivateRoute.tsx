@@ -17,7 +17,8 @@ const PrivateRoute: React.FC<IProps> = ({
 
   return (
     <Route
-      {...rest}
+      exact={rest.exact}
+      path={rest.path}
       render={(props) =>
         isAuthenticated === null ? null : isAuthenticated === true ? (
           <Layout>
