@@ -2,7 +2,7 @@ import React from 'react';
 import { postsData } from '../../data';
 import { TPostView } from '../../types/post';
 import { cn } from '../../utils';
-import Post from '../limb/post';
+import Post from '../atoms/post';
 
 interface IProps {
   postsView?: TPostView;

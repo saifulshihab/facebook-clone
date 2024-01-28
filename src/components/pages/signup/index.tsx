@@ -1,8 +1,8 @@
 import { Formik } from 'formik';
 import React from 'react';
 import * as yup from 'yup';
-import Button from '../../limb/button/Button';
-import { TextInput } from '../../limb/input/TextInput';
+import Button from '../../atoms/button/Button';
+import { TextInput } from '../../atoms/input/TextInput';
 
 const RegisterPage: React.FC = () => {
   const fieldValidationSchema = yup.object({

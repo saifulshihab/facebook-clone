@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from 'react';
+import Navbar from '../atoms/navbar';
 import MainContentContainer from '../common';
-import Navbar from '../limb/navbar';
 
 const WatchPageLayout: React.FC<PropsWithChildren> = (props) => {
   const { children } = props;
