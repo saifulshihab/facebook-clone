@@ -2,7 +2,7 @@ import React from 'react';
 
 const RightSidebar: React.FC = () => {
   return (
-    <div className="w-9/12 h-auto py-3 pr-2">
+    <div className="w-[22.5rem] h-auto py-3 pr-2">
       <div className="w-full text-gray-600 border-b-2 pb-2 mb-2 border-gray-300">
         <p className="font-semibold mb-2">Your Pages</p>
         <li className="h-12 mb-2 flex items-center -ml-3 justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">

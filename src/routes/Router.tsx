@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import GamingPageLayout from '../components/layouts/GamingPageLayout';
-import HomePageLayout from '../components/layouts/HomePageLayout';
 import MarketplacePageLayout from '../components/layouts/MarketplacePage';
+import NewsFeedLayout from '../components/layouts/NewsFeedLayout';
 import ProfilePageLayout from '../components/layouts/ProfilePageLayout';
 import WatchPageLayout from '../components/layouts/WatchPageLayout';
 import GamingPage from '../components/pages/gaming';
-import HomePage from '../components/pages/home';
 import LoginPage from '../components/pages/login';
 import MarketplacePage from '../components/pages/marketplace';
+import NewsFeedPage from '../components/pages/newsfeed';
 import PageNotFound from '../components/pages/notfound';
 import ProfilePage from '../components/pages/profile';
 import RegisterPage from '../components/pages/signup';
@@ -33,8 +33,8 @@ const Routers: React.FC = () => {
       <Route
         path={HOME}
         element={
-          <PrivateRoute layout={HomePageLayout}>
-            <HomePage />
+          <PrivateRoute layout={NewsFeedLayout}>
+            <NewsFeedPage />
           </PrivateRoute>
         }
       />
