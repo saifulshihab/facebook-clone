@@ -1,4 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
+import { cn } from '../../../utils';
 
 type IColor = 'text-primary';
 type IBackground = 'bg-white' | 'bg-greenLight';
@@ -32,14 +33,15 @@ const Button: React.FC<IProps> = (props) => {
   return (
     <button
       {...props}
-      className={`${
-        block ? 'w-full' : 'inline-block'
-      } px-4 items-center justify-center rounded-md shadow-md font ${
-        size === 'small' ? 'h-7' : size === 'large' ? 'h-11' : 'h-8'
-      } ${color ? color : 'text-white'} ${bg ? bg : 'bg-primary'}
-      ${fontWeight ? fontWeight : 'font-semibold'}
-      ${fontSize ? fontSize : 'text-sm'}
-      `}
+      className={cn(
+        'px-4 items-center justify-center rounded-md shadow-md',
+        block ? 'w-full' : 'inline-block',
+        size === 'small' ? 'h-7' : size === 'large' ? 'h-11' : 'h-8',
+        bg ? bg : 'bg-primary',
+        color ? color : 'text-white',
+        fontWeight ? fontWeight : 'font-semibold',
+        fontSize ? fontSize : 'text-sm'
+      )}
       disabled={isDisabled}
     >
       {isLoading ? '...' : children}

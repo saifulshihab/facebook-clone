@@ -7,7 +7,7 @@ export const postsData: IPost[] = [
     user: {
       _id: '1',
       username: 'shihab',
-      fullname: 'Saiful Islam Shihab',
+      fullName: 'Saiful Islam Shihab',
       dp: 'https://random.imagecdn.app/500/200',
     },
     caption: 'This is post caption',
@@ -22,7 +22,7 @@ export const postsData: IPost[] = [
     _id: '2',
     user: {
       _id: '1',
-      fullname: 'Saiful Islam Shihab',
+      fullName: 'Saiful Islam Shihab',
       username: 'shihab',
       dp: 'https://random.imagecdn.app/500/200',
     },
@@ -38,7 +38,7 @@ export const postsData: IPost[] = [
     _id: '3',
     user: {
       _id: '1',
-      fullname: 'Saiful Islam Shihab',
+      fullName: 'Saiful Islam Shihab',
       username: 'shihab',
       dp: 'https://random.imagecdn.app/500/200',
     },
@@ -54,7 +54,7 @@ export const postsData: IPost[] = [
     _id: '4',
     user: {
       _id: '1',
-      fullname: 'Saiful Islam Shihab',
+      fullName: 'Saiful Islam Shihab',
       username: 'shihab',
       dp: 'https://random.imagecdn.app/500/200',
     },
@@ -74,7 +74,7 @@ export const storiesData: IStory[] = [
     image: 'https://random.imagecdn.app/200/300',
     user: {
       _id: '1',
-      fullname: 'Saiful Islam',
+      fullName: 'Saiful Islam',
       dp: 'https://random.imagecdn.app/100/100',
     },
     createdAt: new Date(),
@@ -84,7 +84,7 @@ export const storiesData: IStory[] = [
     image: 'https://random.imagecdn.app/200/400',
     user: {
       _id: '1',
-      fullname: 'Shihab',
+      fullName: 'Shihab',
       dp: 'https://random.imagecdn.app/200/200',
     },
     createdAt: new Date(),
@@ -94,7 +94,7 @@ export const storiesData: IStory[] = [
     image: 'https://random.imagecdn.app/200/700',
     user: {
       _id: '1',
-      fullname: 'Ovy Bin',
+      fullName: 'Ovy Bin',
       dp: 'https://random.imagecdn.app/200/150',
     },
     createdAt: new Date(),
@@ -104,7 +104,7 @@ export const storiesData: IStory[] = [
     image: 'https://random.imagecdn.app/200/250',
     user: {
       _id: '1',
-      fullname: 'Antor',
+      fullName: 'Antor',
       dp: 'https://random.imagecdn.app/200/200',
     },
     createdAt: new Date(),

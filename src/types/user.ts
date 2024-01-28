@@ -1,5 +1,5 @@
 export interface IUser {
-  fullname: string;
+  fullName: string;
   username: string;
   email: string;
   password: string;
@@ -24,7 +24,7 @@ export interface IStory {
   image: string;
   user: {
     _id: string;
-    fullname: string;
+    fullName: string;
     dp?: string;
   };
   createdAt: Date;

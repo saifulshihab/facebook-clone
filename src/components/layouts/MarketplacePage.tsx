@@ -1,12 +1,8 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import MainContentContainer from '../common';
 import Navbar from '../limb/navbar';
 
-interface IProps {
-  children?: React.ReactNode;
-}
-
-const MarketplacePageLayout: React.FC<IProps> = (props) => {
+const MarketplacePageLayout: React.FC<PropsWithChildren> = (props) => {
   const { children } = props;
   return (
     <div className="w-full h-full flex flex-col">

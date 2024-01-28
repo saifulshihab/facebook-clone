@@ -1,5 +1,6 @@
 {
-  "cSpell.words": ["formik", "tailwindcss"],
+  "cSpell.words": ["clsx", "formik", "Shihab", "signup", "tailwindcss"],
+  "css.lint.unknownAtRules": "ignore",
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always"
   }

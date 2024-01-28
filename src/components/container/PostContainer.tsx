@@ -1,6 +1,7 @@
 import React from 'react';
-import { postsData } from '../../database';
+import { postsData } from '../../data';
 import { TPostView } from '../../types/post';
+import { cn } from '../../utils';
 import Post from '../limb/post';
 
 interface IProps {
@@ -12,9 +13,10 @@ const PostContainer: React.FC<IProps> = (props) => {
   return (
     <div className="mt-4 w-full h-full">
       <div
-        className={`grid ${
+        className={cn(
+          'grid gap-2',
           postsView === 'gridView' ? 'grid-cols-2' : 'grid-cols-1'
-        } gap-2`}
+        )}
       >
         {postsData.length ? (
           postsData.map((post, idx) => <Post key={idx} post={post} />)

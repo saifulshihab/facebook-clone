@@ -1,6 +1,6 @@
+import moment from 'moment';
 import React from 'react';
 import { IPost } from '../../../types/post';
-import moment from 'moment';
 interface IProps {
   post: IPost;
 }
@@ -15,7 +15,7 @@ const Post: React.FC<IProps> = (props) => {
           <img src={user.dp} className="w-full h-full rounded-full" alt="dp" />
         </div>
         <div className="flex-grow flex flex-col">
-          <p className="font-semibold text-sm text-gray-700">{user.fullname}</p>
+          <p className="font-semibold text-sm text-gray-700">{user.fullName}</p>
           <span className="text-xs font-thin text-gray-400">
             {moment(post.createdAt).fromNow()}
           </span>
@@ -37,7 +37,7 @@ const Post: React.FC<IProps> = (props) => {
         <div className="w-full h-76 max-h-100">
           <img
             src={post.image}
-            alt="postimage"
+            alt="postImage"
             className="w-full h-76 max-h-100 object-cover"
           />
         </div>

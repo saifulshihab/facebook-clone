@@ -1,8 +1,8 @@
 import { Formik } from 'formik';
 import React from 'react';
+import * as yup from 'yup';
 import Button from '../../limb/button/Button';
 import { TextInput } from '../../limb/input/TextInput';
-import * as yup from 'yup';
 
 const RegisterPage: React.FC = () => {
   const fieldValidationSchema = yup.object({
@@ -18,19 +18,21 @@ const RegisterPage: React.FC = () => {
             emailOrPhone: '',
             password: '',
           }}
-          onSubmit={() => {}}
+          onSubmit={() => {
+            return;
+          }}
           validationSchema={fieldValidationSchema}
         >
           {({ handleSubmit }) => (
             <form onSubmit={handleSubmit}>
               <TextInput
-                inputsize="large"
+                inputSize="large"
                 type="text"
                 placeholder="Email address or phone number"
                 name="emailOrPhone"
               />
               <TextInput
-                inputsize="large"
+                inputSize="large"
                 name="password"
                 type="password"
                 placeholder="Password"

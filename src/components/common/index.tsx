@@ -1,19 +1,8 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-interface IProps {
-  children?: React.ReactNode;
-}
-
-const MainContentContainer: React.FC<IProps> = (props) => {
+const MainContentContainer: React.FC<PropsWithChildren> = (props) => {
   const { children } = props;
-  return (
-    <div
-      className=""
-      style={{ marginTop: '3.5rem', minHeight: 'calc(100% - 4rem)' }}
-    >
-      {children}
-    </div>
-  );
+  return <div className="mt-14 min-h-[calc(100%-4rem)]">{children}</div>;
 };
 
 export default MainContentContainer;

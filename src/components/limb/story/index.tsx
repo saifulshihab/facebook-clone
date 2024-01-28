@@ -21,7 +21,7 @@ const Story: React.FC<IProps> = (props) => {
         />
       </div>
       <div className="absolute text-center" style={{ bottom: '5%' }}>
-        <p className="text-white font-semibold">{user.fullname}</p>
+        <p className="text-white font-semibold">{user.fullName}</p>
       </div>
     </div>
   );

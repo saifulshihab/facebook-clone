@@ -4,7 +4,7 @@ export interface IPost {
   _id: string;
   user: {
     _id: string;
-    fullname: string;
+    fullName: string;
     username: string;
     dp?: string;
   };

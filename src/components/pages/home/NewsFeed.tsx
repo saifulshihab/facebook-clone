@@ -1,8 +1,8 @@
 import React from 'react';
-import CreatePostBox from '../../limb/post/CreatePostBox';
+import { storiesData } from '../../../data';
 import PostContainer from '../../container/PostContainer';
+import CreatePostBox from '../../limb/post/CreatePostBox';
 import Story from '../../limb/story';
-import { storiesData } from '../../../database';
 
 const NewsFeed: React.FC = () => {
   return (
