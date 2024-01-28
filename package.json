@@ -1,39 +1,49 @@
 {
-  "private": "true",
-  "name": "facebook-clone",
-  "version": "1.0.0",
-  "description": "Facebook clone using React.js, Node.js, GraphQL & TypeScript",
-  "main": "index.js",
-  "scripts": {
-    "postinstall": "husky install",
-    "start:web": "yarn workspace facebook-clone-client dev",
-    "start:server": "yarn workspace facebook-clone-server dev",
-    "build:web": "yarn workspace facebook-clone-client build",
-    "build:server": "yarn workspace facebook-clone-server build",
-    "build:all": "yarn workspace facebook-clone-client build && yarn workspace facebook-clone-server build"
+  "name": "facebook-ui-clone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "formik": "^2.2.9",
+    "moment": "^2.29.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^3.11.0",
+    "react-router-dom": "^6.4.3",
+    "yup": "^0.32.11"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/saifulshihab/facebook-clone.git"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|jsx|tsx|json)\""
   },
   "keywords": [
+    "react",
     "facebook-clone",
-    "react-facebook-clone",
-    "full-stack-facebook",
-    "react-graphql-facebook-clone"
+    "facebook",
+    "tailwindcss",
+    "react-facebook-clone"
   ],
-  "author": "Saiful Islam",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/saifulshihab/facebook-clone/issues"
-  },
-  "homepage": "https://github.com/saifulshihab/facebook-clone#readme",
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
-    "husky": "^7.0.4"
-  },
-  "workspaces": [
-    "packages/**"
-  ]
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@types/react-router-dom": "^5.3.2",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.38.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.4",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  }
 }
