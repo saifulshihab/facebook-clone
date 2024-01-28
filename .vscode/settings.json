@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["formik", "tailwindcss"],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  }
+}

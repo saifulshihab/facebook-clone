@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "postinstall": "husky install",
-    "start:web": "yarn workspace facebook-clone-client start",
+    "start:web": "yarn workspace facebook-clone-client dev",
     "start:server": "yarn workspace facebook-clone-server dev",
     "build:web": "yarn workspace facebook-clone-client build",
     "build:server": "yarn workspace facebook-clone-server build",

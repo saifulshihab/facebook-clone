@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import GamingPageLayout from '../components/layouts/GamingPageLayout';
 import HomePageLayout from '../components/layouts/HomePageLayout';
 import MarketplacePageLayout from '../components/layouts/MarketplacePage';
@@ -26,59 +26,57 @@ import {
 
 const Routers: React.FC = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={LOGIN} element={<LoginPage />} />
-        <Route path={REGISTER} element={<RegisterPage />} />
+    <Routes>
+      <Route path={LOGIN} element={<LoginPage />} />
+      <Route path={REGISTER} element={<RegisterPage />} />
 
-        <Route
-          path={HOME}
-          element={
-            <PrivateRoute layout={HomePageLayout}>
-              <HomePage />
-            </PrivateRoute>
-          }
-        />
+      <Route
+        path={HOME}
+        element={
+          <PrivateRoute layout={HomePageLayout}>
+            <HomePage />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path={WATCH}
-          element={
-            <PrivateRoute layout={WatchPageLayout}>
-              <WatchPage />
-            </PrivateRoute>
-          }
-        />
+      <Route
+        path={WATCH}
+        element={
+          <PrivateRoute layout={WatchPageLayout}>
+            <WatchPage />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path={MARKETPLACE}
-          element={
-            <PrivateRoute layout={MarketplacePageLayout}>
-              <MarketplacePage />
-            </PrivateRoute>
-          }
-        />
+      <Route
+        path={MARKETPLACE}
+        element={
+          <PrivateRoute layout={MarketplacePageLayout}>
+            <MarketplacePage />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path={GAMING}
-          element={
-            <PrivateRoute layout={GamingPageLayout}>
-              <GamingPage />
-            </PrivateRoute>
-          }
-        />
+      <Route
+        path={GAMING}
+        element={
+          <PrivateRoute layout={GamingPageLayout}>
+            <GamingPage />
+          </PrivateRoute>
+        }
+      />
 
-        <Route
-          path={PROFILE}
-          element={
-            <PrivateRoute layout={ProfilePageLayout}>
-              <ProfilePage />
-            </PrivateRoute>
-          }
-        />
+      <Route
+        path={PROFILE}
+        element={
+          <PrivateRoute layout={ProfilePageLayout}>
+            <ProfilePage />
+          </PrivateRoute>
+        }
+      />
 
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   );
 };
 
