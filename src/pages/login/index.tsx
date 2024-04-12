@@ -1,10 +1,11 @@
 import { Formik } from 'formik';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import * as yup from 'yup';
-import Button from '../../atoms/button/Button';
-import { TextInput } from '../../atoms/input/TextInput';
+import Button from '../../components/atoms/button/Button';
+import { TextInput } from '../../components/atoms/input/TextInput';
 
-const RegisterPage: React.FC = () => {
+const LoginPage: React.FC = () => {
   const fieldValidationSchema = yup.object({
     emailOrPhone: yup.string().required('Email or phone required'),
     password: yup.string().required('Password required'),
@@ -19,7 +20,7 @@ const RegisterPage: React.FC = () => {
             password: '',
           }}
           onSubmit={() => {
-            return;
+            // console.log(values);
           }}
           validationSchema={fieldValidationSchema}
         >
@@ -44,14 +45,27 @@ const RegisterPage: React.FC = () => {
                 fontSize="text-xl"
                 fontWeight="font-bold"
               >
-                Register
+                Login
               </Button>
+              <div className="mt-2 text-center pb-3 border-b border-gray-300">
+                <p className="text-primary cursor-pointer underline">
+                  Forgot password?
+                </p>
+              </div>
             </form>
           )}
         </Formik>
+
+        <div className="mt-5 text-center">
+          <Link to="/register">
+            <Button size="large" bg="bg-greenLight" fontSize="text-xl">
+              Create New Account
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
 };
 
-export default RegisterPage;
+export default LoginPage;

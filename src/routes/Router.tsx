@@ -5,14 +5,14 @@ import MarketplacePageLayout from '../components/layouts/MarketplacePage';
 import NewsFeedLayout from '../components/layouts/NewsFeedLayout';
 import ProfilePageLayout from '../components/layouts/ProfilePageLayout';
 import WatchPageLayout from '../components/layouts/WatchPageLayout';
-import GamingPage from '../components/pages/gaming';
-import LoginPage from '../components/pages/login';
-import MarketplacePage from '../components/pages/marketplace';
-import NewsFeedPage from '../components/pages/newsfeed';
-import PageNotFound from '../components/pages/notfound';
-import ProfilePage from '../components/pages/profile';
-import RegisterPage from '../components/pages/signup';
-import WatchPage from '../components/pages/watch';
+import GamingPage from '../pages/gaming';
+import LoginPage from '../pages/login';
+import MarketplacePage from '../pages/marketplace';
+import NewsFeedPage from '../pages/newsfeed';
+import PageNotFound from '../pages/notfound';
+import ProfilePage from '../pages/profile';
+import RegisterPage from '../pages/signup';
+import WatchPage from '../pages/watch';
 import { PrivateRoute } from './PrivateRoute';
 import {
   GAMING,
