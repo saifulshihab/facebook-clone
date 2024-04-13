@@ -2,7 +2,7 @@
 
 Building Facebook UI Clone using React & Tailwind CSS🔥
 
-<img src="https://repository-images.githubusercontent.com/295202619/a69feb00-ce17-11eb-99c0-88a325f87bf9" alt="screenshot"/>
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/ccd524196151667.661afcfd9f3f1.png" alt="screenshot"/>
 
 # Installation
 
