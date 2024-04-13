@@ -18,7 +18,7 @@ const CreatePostBox: React.FC = () => {
       <div className="flex space-x-3 font-thin text-sm text-gray-600 -mb-1">
         <button className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
           <div>
-            <i className="fab fa-youtube text-red-400"></i>
+            <i className="fab fa-youtube text-red-600"></i>
           </div>
           <div>
             <p className="font-semibold">Create Video</p>
@@ -26,7 +26,7 @@ const CreatePostBox: React.FC = () => {
         </button>
         <button className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
           <div>
-            <i className="fas fa-images text-green-500"></i>
+            <i className="fas fa-images text-green-600"></i>
           </div>
           <div>
             <p className="font-semibold">Photos/Video</p>
@@ -34,7 +34,7 @@ const CreatePostBox: React.FC = () => {
         </button>
         <button className="flex-1 flex items-center h-8 focus:outline-none focus:bg-gray-200 justify-center space-x-2 hover:bg-gray-100 rounded-md">
           <div>
-            <i className="far fa-smile text-yellow-500"></i>
+            <i className="far fa-smile text-yellow-600"></i>
           </div>
           <div>
             <p className="font-semibold">Feeling/Activity</p>
