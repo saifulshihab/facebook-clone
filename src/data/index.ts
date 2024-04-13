@@ -11,7 +11,7 @@ export const postsData: IPost[] = [
       dp: 'https://random.imagecdn.app/500/200',
     },
     caption: 'This is post caption',
-    image: 'https://random.imagecdn.app/1920/1080',
+    image: 'https://random.imagecdn.app/1920/1081',
     likes: 129,
     comments: 5,
     shares: 0,
@@ -94,7 +94,7 @@ export const storiesData: IStory[] = [
     image: 'https://random.imagecdn.app/200/700',
     user: {
       _id: '1',
-      fullName: 'Ovy Bin',
+      fullName: 'Shi',
       dp: 'https://random.imagecdn.app/200/150',
     },
     createdAt: new Date(),
@@ -104,7 +104,7 @@ export const storiesData: IStory[] = [
     image: 'https://random.imagecdn.app/200/250',
     user: {
       _id: '1',
-      fullName: 'Antor',
+      fullName: 'Hab',
       dp: 'https://random.imagecdn.app/200/200',
     },
     createdAt: new Date(),
