@@ -2,8 +2,8 @@ import React from 'react';
 
 const LeftSidebar: React.FC = () => {
   return (
-    <div className="w-[22.5rem] h-auto py-3">
-      <ul className="w-full text-gray-600">
+    <div className="w-[22.5rem] h-[calc(100vh-56px)] sticky top-[56px] overflow-y-auto py-3">
+      <ul className="w-full">
         <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
           <div>
             <img
@@ -20,19 +20,7 @@ const LeftSidebar: React.FC = () => {
           <div>
             <img
               className="w-8 h-8 rounded-full"
-              src="https://static.xx.fbcdn.net/rsrc.php/v3/yR/r/tInzwsw2pVX.png"
-              alt="info"
-            />
-          </div>
-          <div>
-            <p className="text-sm font-semibold">Covid-19 Information Center</p>
-          </div>
-        </li>
-        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
-          <div>
-            <img
-              className="w-8 h-8 rounded-full"
-              src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png"
+              src="https://random.imagecdn.app/32/32"
               alt="friends"
             />
           </div>
@@ -43,8 +31,20 @@ const LeftSidebar: React.FC = () => {
         <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
           <div>
             <img
+              className="w-8 h-8 rounded-full bg-no-repeat"
+              src="https://random.imagecdn.app/32/33"
+              alt="memories"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Messenger</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
               className="w-8 h-8 rounded-full"
-              src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
+              src="https://random.imagecdn.app/32/32"
               alt="memories"
             />
           </div>
@@ -56,8 +56,140 @@ const LeftSidebar: React.FC = () => {
           <div>
             <img
               className="w-8 h-8 rounded-full"
-              src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png"
+              src="https://random.imagecdn.app/32/33"
               alt="pages"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Saved</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/4"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Groups</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/35"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Video</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/36"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Marketplace</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/37"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Feeds</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/38"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Ads Manager</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/40"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Events</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/41"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Fundraisers</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/42"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Gaming video</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/43"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Messenger kids</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/44"
+              alt="groups"
+            />
+          </div>
+          <div>
+            <p className="text-sm font-semibold">Order & payments</p>
+          </div>
+        </li>
+        <li className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+          <div>
+            <img
+              className="w-8 h-8 rounded-full"
+              src="https://random.imagecdn.app/32/45"
+              alt="groups"
             />
           </div>
           <div>
@@ -68,12 +200,12 @@ const LeftSidebar: React.FC = () => {
           <div>
             <img
               className="w-8 h-8 rounded-full"
-              src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png"
+              src="https://random.imagecdn.app/32/36"
               alt="groups"
             />
           </div>
           <div>
-            <p className="text-sm font-semibold">Groups</p>
+            <p className="text-sm font-semibold">Play games</p>
           </div>
         </li>
       </ul>
