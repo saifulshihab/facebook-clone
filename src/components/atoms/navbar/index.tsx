@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const pathName = location?.pathname.split('/')[1];
   return (
-    <div className="fixed z-50 grid h-14 w-full grid-cols-7 gap-4 bg-white">
+    <div className="fixed z-50 grid h-14 w-full grid-cols-7 gap-4 bg-white dark:bg-[#242526]">
       <div className="col-span-2 flex items-center">
         <div className="ml-2 flex items-center">
           <div className="h-10 text-primary">
@@ -18,14 +18,14 @@ const Navbar: React.FC = () => {
           <div className="h-10">
             <input
               placeholder="Search Facebook"
-              className="ml-2 h-full rounded-full bg-gray-100 px-3 pr-4 focus:outline-none"
+              className="dark:placeholder:text-gra ml-2 h-full rounded-full bg-gray-100 px-3 pr-4 placeholder:text-neutral-400 focus:outline-none dark:bg-neutral-700"
             />
           </div>
         </div>
       </div>
       <div className="col-span-3 flex items-center justify-center space-x-2">
         <Link to="/" id="home">
-          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100">
+          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
         </Link>
         <Tooltip place="bottom" anchorSelect="#home" content="Home" />
         <Link to="/watch" id="watch">
-          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100">
+          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div className="absolute right-0 top-0 rounded-lg bg-red-500 px-1 text-xs font-bold text-white">
                 9+
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
         </Link>
         <Tooltip place="bottom" anchorSelect="#watch" content="Video" />
         <Link to="/marketplace" id="marketplace">
-          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100">
+          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
           content="Marketplace"
         />
         <Link to="/groups" id="groups">
-          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100">
+          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -129,7 +129,7 @@ const Navbar: React.FC = () => {
         </Link>
         <Tooltip place="bottom" anchorSelect="#groups" content="Groups" />
         <Link to="/gaming" id="gaming">
-          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100">
+          <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -156,7 +156,7 @@ const Navbar: React.FC = () => {
       <div className="col-span-2 flex items-center justify-end">
         <div className="flex h-10 w-auto items-center space-x-2 pr-2">
           <Link to="/profile">
-            <button className="flex h-10 items-center justify-center space-x-1 rounded-full px-2 hover:bg-gray-300 focus:outline-none">
+            <button className="flex h-10 items-center justify-center space-x-1 rounded-full px-2 text-black hover:bg-gray-300 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
               <div className="h-8">
                 <img
                   src="https://random.imagecdn.app/200/200"
@@ -169,16 +169,16 @@ const Navbar: React.FC = () => {
               </div>
             </button>
           </Link>
-          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">
             <i className="fas fa-plus"></i>
           </button>
-          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">
             <i className="fab fa-facebook-messenger"></i>
           </button>
-          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">
             <i className="fas fa-bell"></i>
           </button>
-          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none">
+          <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">
             <i className="fas fa-sort-down"></i>
           </button>
         </div>

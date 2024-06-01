@@ -7,8 +7,8 @@ const ProfilePage: React.FC = () => {
   const [postsView, setPostsView] = useState<TPostView>('listView');
   return (
     <div className="h-full w-full">
-      <div className="h-auto w-full rounded-md bg-white shadow">
-        <div className="mx-auto h-full max-w-6xl bg-white">
+      <div className="h-auto w-full bg-white shadow dark:bg-neutral-800">
+        <div className="mx-auto h-full max-w-6xl rounded-md bg-white dark:bg-neutral-800">
           <div
             className="relative h-[28.75rem] max-h-[28.75rem] w-full rounded-lg"
             style={{
@@ -30,7 +30,7 @@ const ProfilePage: React.FC = () => {
             </div>
           </div>
           <div className="mx-auto h-full px-10">
-            <div className="flex items-end gap-5 border-b pb-5">
+            <div className="flex items-end gap-5 border-b pb-5 dark:border-stone-700">
               <div className="z-10 -mt-8 h-[10.25rem] w-[10.25rem]">
                 <img
                   className="h-full w-full rounded-full border-4 border-primary"
@@ -39,62 +39,63 @@ const ProfilePage: React.FC = () => {
                 />
               </div>
               <div className="flex-1 flex-col pb-2">
-                <p className="text-[2rem] font-bold">Saiful Islam Shihab</p>
-                <a className="cursor-pointer text-sm font-semibold text-gray-600 hover:underline">
+                <p className="text-[2rem] font-bold text-black dark:text-gray-200">
+                  Saiful Islam Shihab
+                </p>
+                <a className="cursor-pointer text-sm font-semibold text-gray-600 hover:underline dark:text-gray-300">
                   528 friends
                 </a>
                 <div className="flex w-full items-center justify-between">
                   <div className="mt-2 flex items-center">
                     <img
-                      className="cursor-pointer rounded-full border-2 border-white"
+                      className="cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="-translate-x-2 cursor-pointer rounded-full border-2 border-white"
+                      className="-translate-x-2 cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="-translate-x-4 cursor-pointer rounded-full border-2 border-white"
+                      className="-translate-x-4 cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="-translate-x-6 cursor-pointer rounded-full border-2 border-white"
+                      className="-translate-x-6 cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="-translate-x-8 cursor-pointer rounded-full border-2 border-white"
+                      className="-translate-x-8 cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="-translate-x-10 cursor-pointer rounded-full border-2 border-white"
+                      className="-translate-x-10 cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="-translate-x-12 cursor-pointer rounded-full border-2 border-white"
+                      className="-translate-x-12 cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="-translate-x-14 cursor-pointer rounded-full border-2 border-white"
+                      className="-translate-x-14 cursor-pointer rounded-full border-2 border-white dark:border-neutral-600"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                   </div>
-
                   <div className="flex items-center space-x-2">
                     <button className="rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none">
                       <i className="fas fa-plus-circle mr-2"></i>Add to Story
                     </button>
-                    <button className="rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold hover:bg-gray-300 focus:outline-none">
+                    <button className="rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
                       <i className="fas fa-pen mr-2"></i>Edit Profile
                     </button>
-                    <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
+                    <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
                       <i className="fas fa-ellipsis-h"></i>
                     </button>
                   </div>
@@ -103,26 +104,26 @@ const ProfilePage: React.FC = () => {
             </div>
             <div className="mt-1 flex items-center justify-between">
               <div className="mb-2 flex items-center space-x-2">
-                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
                   Posts
                 </button>
-                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
                   About
                 </button>
-                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
                   Friends
                 </button>
-                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
                   Photos
                 </button>
-                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
                   Story Archrive
                 </button>
-                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
                   Videos
                 </button>
               </div>
-              <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
+              <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
                 <i className="fas fa-ellipsis-h"></i>
               </button>
             </div>
@@ -133,7 +134,7 @@ const ProfilePage: React.FC = () => {
       <div className="mx-auto my-3 h-full max-w-6xl">
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-2 flex flex-col gap-4">
-            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow">
+            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow dark:bg-neutral-800 dark:text-gray-300">
               <p className="text-xl font-bold text-gray-800">Intro</p>
               <div className="flex flex-col items-center gap-2">
                 <div className="flex flex-col items-center">
@@ -147,7 +148,7 @@ const ProfilePage: React.FC = () => {
                     https://saiful-islam.vercel.app
                   </a>
                 </div>
-                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
+                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
                   Edit bio
                 </button>
               </div>
@@ -156,10 +157,7 @@ const ProfilePage: React.FC = () => {
                   <span>
                     <i className="fas fa-briefcase text-[1.25rem] text-gray-400"></i>
                   </span>
-                  <p>
-                    Full Stack Web Developer at{' '}
-                    <span className="font-semibold">Fiverr</span>
-                  </p>
+                  <p>Software Engineer</p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
@@ -267,7 +265,7 @@ const ProfilePage: React.FC = () => {
               </div>
 
               <div>
-                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
+                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
                   Edit details
                 </button>
               </div>
@@ -291,14 +289,16 @@ const ProfilePage: React.FC = () => {
               </div>
 
               <div>
-                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
+                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:hover:bg-neutral-600">
                   Edit featured
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow">
+            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow dark:bg-neutral-800">
               <div className="flex items-center justify-between">
-                <p className="text-xl font-bold text-gray-800">Photos</p>
+                <p className="text-xl font-bold text-gray-800 dark:text-gray-300">
+                  Photos
+                </p>
                 <a className="cursor-pointer text-sm text-primary hover:underline">
                   See all photos
                 </a>
@@ -351,11 +351,15 @@ const ProfilePage: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow">
+            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 shadow dark:bg-neutral-800">
               <div className="flex justify-between">
                 <div>
-                  <p className="text-xl font-bold text-gray-800">Friends</p>
-                  <p>528 friends</p>
+                  <p className="text-xl font-bold text-gray-800 dark:text-gray-300">
+                    Friends
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    528 friends
+                  </p>
                 </div>
                 <a className="cursor-pointer text-sm text-primary hover:underline">
                   See all friends
@@ -368,7 +372,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/125"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 1</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 1
+                  </p>
                 </div>
                 <div>
                   <img
@@ -376,7 +382,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/126"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 2</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 2
+                  </p>
                 </div>
                 <div>
                   <img
@@ -384,7 +392,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/127"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 3</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 3
+                  </p>
                 </div>
                 <div>
                   <img
@@ -392,7 +402,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/128"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 4</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 4
+                  </p>
                 </div>
                 <div>
                   <img
@@ -400,7 +412,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/129"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 5</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 5
+                  </p>
                 </div>
                 <div>
                   <img
@@ -408,7 +422,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/130"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 6</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 6
+                  </p>
                 </div>
                 <div>
                   <img
@@ -416,7 +432,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/131"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 7</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 7
+                  </p>
                 </div>
                 <div>
                   <img
@@ -424,7 +442,9 @@ const ProfilePage: React.FC = () => {
                     alt="photo"
                     src="https://random.imagecdn.app/125/132"
                   />
-                  <p className="mt-2 text-sm text-black">Friend 8</p>
+                  <p className="mt-2 text-sm text-black dark:text-gray-200">
+                    Friend 8
+                  </p>
                 </div>
               </div>
             </div>
@@ -433,32 +453,38 @@ const ProfilePage: React.FC = () => {
             {/* Create post */}
             <CreatePostBox />
             {/* post filter box */}
-            <div className="mt-4 rounded-md bg-white p-2 px-3 text-sm shadow">
-              <div className="flex items-center justify-between border-b pb-2">
+            <div className="mt-4 rounded-md bg-white p-2 px-3 text-sm shadow dark:bg-neutral-800">
+              <div className="flex items-center justify-between border-b pb-2 dark:border-neutral-700">
                 <div>
-                  <p className="text-xl font-bold text-gray-700">Posts</p>
+                  <p className="text-xl font-bold text-gray-700 dark:text-gray-300">
+                    Posts
+                  </p>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <button className="rounded-md bg-gray-200 px-3 py-1.5 font-semibold hover:bg-gray-300 focus:outline-none">
+                  <button className="rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
                     <i className="fas fa-sliders-h mr-2"></i>Filters
                   </button>
-                  <button className="rounded-md bg-gray-200 px-3 py-1.5 font-semibold hover:bg-gray-300 focus:outline-none">
+                  <button className="rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold text-black hover:bg-gray-200 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
                     <i className="fas fa-cog mr-2"></i>Manage Posts
                   </button>
                 </div>
               </div>
-              <div className="-mb-1 mt-1 flex space-x-3 text-gray-500">
+              <div className="-mb-1 mt-1 flex space-x-3">
                 <button
-                  className={`h-8 flex-1 justify-center space-x-2 rounded-md font-semibold hover:bg-gray-100 focus:outline-none ${
-                    postsView === 'listView' ? 'bg-gray-200' : undefined
+                  className={`h-8 flex-1 justify-center space-x-2 rounded-md font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-300 dark:hover:bg-neutral-700 ${
+                    postsView === 'listView'
+                      ? 'bg-gray-200 dark:bg-neutral-700'
+                      : undefined
                   }`}
                   onClick={() => setPostsView('listView')}
                 >
                   <i className="fas fa-bars mr-2"></i>List View
                 </button>
                 <button
-                  className={`h-8 flex-1 justify-center space-x-2 rounded-md font-semibold hover:bg-gray-100 focus:outline-none ${
-                    postsView === 'gridView' ? 'bg-gray-200' : undefined
+                  className={`h-8 flex-1 justify-center space-x-2 rounded-md font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none dark:text-gray-300 dark:hover:bg-neutral-700 ${
+                    postsView === 'gridView'
+                      ? 'bg-gray-200 dark:bg-neutral-700'
+                      : undefined
                   }`}
                   onClick={() => setPostsView('gridView')}
                 >
