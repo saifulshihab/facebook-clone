@@ -5,7 +5,7 @@ import MainContentContainer from '../common';
 const ProfilePageLayout: React.FC<PropsWithChildren> = (props) => {
   const { children } = props;
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="flex h-full w-full flex-col">
       <Navbar />
       <MainContentContainer>{children}</MainContentContainer>
     </div>

@@ -2,13 +2,13 @@ import React from 'react';
 
 const RightSidebar: React.FC = () => {
   return (
-    <div className="w-[22.5rem] h-[calc(100vh-56px)] sticky top-[56px] overflow-y-auto  py-3 pr-2">
-      <div className="w-full border-b-2 pb-2 mb-2 border-gray-300">
-        <p className="font-semibold mb-2">Your Pages</p>
-        <li className="h-12 mb-2 flex items-center -ml-2 justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200">
+    <div className="sticky top-[56px] h-[calc(100vh-56px)] w-[22.5rem] overflow-y-auto py-3 pr-2">
+      <div className="mb-2 w-full border-b-2 border-gray-300 pb-2">
+        <p className="mb-2 font-semibold">Your Pages</p>
+        <li className="justify-content -ml-2 mb-2 flex h-12 cursor-pointer items-center space-x-2 rounded-md p-2 hover:bg-gray-200">
           <div>
             <img
-              className="w-8 h-8 rounded-full"
+              className="h-8 w-8 rounded-full"
               src="https://random.imagecdn.app/32/32"
               alt="user"
             />
@@ -17,8 +17,8 @@ const RightSidebar: React.FC = () => {
             <p className="text-sm font-semibold">Night Fury Gaming</p>
           </div>
         </li>
-        <ul className="text-gray-500 text-sm">
-          <li className="h-8 mb-2 flex items-center justify-content cursor-pointer space-x-3 p-2 rounded-md hover:bg-gray-200">
+        <ul className="text-sm text-gray-500">
+          <li className="justify-content mb-2 flex h-8 cursor-pointer items-center space-x-3 rounded-md p-2 hover:bg-gray-200">
             <div>
               <i className="fas fa-bell"></i>
             </div>
@@ -26,7 +26,7 @@ const RightSidebar: React.FC = () => {
               <p className="text-xs">Notification</p>
             </div>
           </li>
-          <li className="h-8 flex items-center justify-content cursor-pointer space-x-3 p-2 rounded-md hover:bg-gray-200">
+          <li className="justify-content flex h-8 cursor-pointer items-center space-x-3 rounded-md p-2 hover:bg-gray-200">
             <div>
               <i className="fas fa-bullhorn"></i>
             </div>
@@ -42,13 +42,13 @@ const RightSidebar: React.FC = () => {
             <p className="font-semibold">Contacts</p>
           </div>
           <div className="flex items-center space-x-3 text-gray-500">
-            <button className="w-8 h-8 focus:outline-none rounded-full hover:bg-gray-200">
+            <button className="h-8 w-8 rounded-full hover:bg-gray-200 focus:outline-none">
               <i className="fab fa-youtube"></i>
             </button>
-            <button className="w-8 h-8 focus:outline-none rounded-full hover:bg-gray-200">
+            <button className="h-8 w-8 rounded-full hover:bg-gray-200 focus:outline-none">
               <i className="fas fa-search"></i>
             </button>
-            <button className="w-8 h-8 focus:outline-none rounded-full hover:bg-gray-200">
+            <button className="h-8 w-8 rounded-full hover:bg-gray-200 focus:outline-none">
               <i className="fas fa-ellipsis-h"></i>
             </button>
           </div>
@@ -60,11 +60,11 @@ const RightSidebar: React.FC = () => {
               .map((_, idx) => (
                 <li
                   key={idx}
-                  className="h-12 mb-2 flex items-center justify-content cursor-pointer space-x-2 p-2 rounded-md hover:bg-gray-200"
+                  className="justify-content mb-2 flex h-12 cursor-pointer items-center space-x-2 rounded-md p-2 hover:bg-gray-200"
                 >
                   <div>
                     <img
-                      className="w-8 h-8 rounded-full"
+                      className="h-8 w-8 rounded-full"
                       src={`https://random.imagecdn.app/200/${200 + idx}`}
                       alt="user"
                     />

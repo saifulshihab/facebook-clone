@@ -7,12 +7,12 @@ import RightSidebar from '../organisms/newsfeed/RightSidebar';
 const NewsFeedLayout: React.FC<PropsWithChildren> = (props) => {
   const { children } = props;
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="flex h-full w-full flex-col">
       <Navbar />
       <MainContentContainer>
         <div className="flex">
           <LeftSidebar />
-          <div className="flex-1 ">{children}</div>
+          <div className="flex-1">{children}</div>
           <RightSidebar />
         </div>
       </MainContentContainer>

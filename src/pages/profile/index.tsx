@@ -6,11 +6,11 @@ import { TPostView } from '../../types/post';
 const ProfilePage: React.FC = () => {
   const [postsView, setPostsView] = useState<TPostView>('listView');
   return (
-    <div className="w-full h-full">
-      <div className="w-full h-auto shadow bg-white rounded-md">
-        <div className="max-w-6xl h-full mx-auto bg-white">
+    <div className="h-full w-full">
+      <div className="h-auto w-full rounded-md bg-white shadow">
+        <div className="mx-auto h-full max-w-6xl bg-white">
           <div
-            className="h-[28.75rem] max-h-[28.75rem] w-full rounded-lg relative"
+            className="relative h-[28.75rem] max-h-[28.75rem] w-full rounded-lg"
             style={{
               backgroundImage: `url('https://random.imagecdn.app/1920/1080')`,
               backgroundRepeat: 'no-repeat',
@@ -19,82 +19,82 @@ const ProfilePage: React.FC = () => {
             }}
           >
             <div
-              className="absolute w-full flex items-center justify-center"
+              className="absolute flex w-full items-center justify-center"
               style={{ bottom: '-15px' }}
             >
               <div className="absolute bottom-[30px] right-[30px]">
-                <button className="focus:outline-none px-3 py-2 hover:bg-gray-50 font-semibold bg-white rounded-md text-sm">
+                <button className="rounded-md bg-white px-3 py-2 text-sm font-semibold hover:bg-gray-50 focus:outline-none">
                   <i className="fas fa-camera mr-2"></i>Edit Cover Photo
                 </button>
               </div>
             </div>
           </div>
-          <div className="h-full mx-auto px-10">
-            <div className="flex gap-5 items-end pb-5 border-b">
-              <div className="w-[10.25rem] h-[10.25rem] -mt-8 z-10">
+          <div className="mx-auto h-full px-10">
+            <div className="flex items-end gap-5 border-b pb-5">
+              <div className="z-10 -mt-8 h-[10.25rem] w-[10.25rem]">
                 <img
-                  className="w-full h-full border-4 border-primary rounded-full"
+                  className="h-full w-full rounded-full border-4 border-primary"
                   src="https://random.imagecdn.app/250/250"
                   alt="dp"
                 />
               </div>
-              <div className="flex-1 pb-2 flex-col">
+              <div className="flex-1 flex-col pb-2">
                 <p className="text-[2rem] font-bold">Saiful Islam Shihab</p>
-                <a className="text-sm text-gray-600 font-semibold hover:underline cursor-pointer">
+                <a className="cursor-pointer text-sm font-semibold text-gray-600 hover:underline">
                   528 friends
                 </a>
-                <div className="w-full flex items-center justify-between">
+                <div className="flex w-full items-center justify-between">
                   <div className="mt-2 flex items-center">
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer"
+                      className="cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer -translate-x-2"
+                      className="-translate-x-2 cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer -translate-x-4"
+                      className="-translate-x-4 cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer -translate-x-6"
+                      className="-translate-x-6 cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer -translate-x-8"
+                      className="-translate-x-8 cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer -translate-x-10"
+                      className="-translate-x-10 cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer -translate-x-12"
+                      className="-translate-x-12 cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                     <img
-                      className="rounded-full border-2 border-white cursor-pointer -translate-x-14"
+                      className="-translate-x-14 cursor-pointer rounded-full border-2 border-white"
                       alt="friend"
                       src="https://random.imagecdn.app/32/32"
                     />
                   </div>
 
                   <div className="flex items-center space-x-2">
-                    <button className="px-3 py-1.5 rounded-md bg-primary text-sm hover:bg-blue-600 text-white font-semibold focus:outline-none">
-                      <i className="fas fa-plus-circle  mr-2"></i>Add to Story
+                    <button className="rounded-md bg-primary px-3 py-1.5 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none">
+                      <i className="fas fa-plus-circle mr-2"></i>Add to Story
                     </button>
-                    <button className="px-3 py-1.5 bg-gray-200 text-sm hover:bg-gray-300 rounded-md font-semibold focus:outline-none">
+                    <button className="rounded-md bg-gray-200 px-3 py-1.5 text-sm font-semibold hover:bg-gray-300 focus:outline-none">
                       <i className="fas fa-pen mr-2"></i>Edit Profile
                     </button>
-                    <button className="px-3 py-1.5 rounded-md bg-gray-100 text-sm hover:bg-gray-200 font-semibold focus:outline-none">
+                    <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
                       <i className="fas fa-ellipsis-h"></i>
                     </button>
                   </div>
@@ -102,27 +102,27 @@ const ProfilePage: React.FC = () => {
               </div>
             </div>
             <div className="mt-1 flex items-center justify-between">
-              <div className="flex mb-2 items-center space-x-2">
-                <button className="py-3 px-2 text-sm text-gray-500 hover:bg-gray-100 rounded-md font-semibold focus:outline-none">
+              <div className="mb-2 flex items-center space-x-2">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
                   Posts
                 </button>
-                <button className="py-3 px-2 text-sm text-gray-500 hover:bg-gray-100 rounded-md font-semibold focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
                   About
                 </button>
-                <button className="py-3 px-2 text-sm text-gray-500 hover:bg-gray-100 rounded-md font-semibold focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
                   Friends
                 </button>
-                <button className="py-3 px-2 text-sm text-gray-500 hover:bg-gray-100 rounded-md font-semibold focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
                   Photos
                 </button>
-                <button className="py-3 px-2 text-sm text-gray-500 hover:bg-gray-100 rounded-md font-semibold focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
                   Story Archrive
                 </button>
-                <button className="py-3 px-2 text-sm text-gray-500 hover:bg-gray-100 rounded-md font-semibold focus:outline-none">
+                <button className="rounded-md px-2 py-3 text-sm font-semibold text-gray-500 hover:bg-gray-100 focus:outline-none">
                   Videos
                 </button>
               </div>
-              <button className="px-3 py-1.5 rounded-md bg-gray-100 text-sm hover:bg-gray-200 font-semibold focus:outline-none">
+              <button className="rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
                 <i className="fas fa-ellipsis-h"></i>
               </button>
             </div>
@@ -130,11 +130,11 @@ const ProfilePage: React.FC = () => {
         </div>
       </div>
       {/* After bio content */}
-      <div className="max-w-6xl h-full mx-auto my-3">
+      <div className="mx-auto my-3 h-full max-w-6xl">
         <div className="grid grid-cols-5 gap-4">
-          <div className="flex flex-col gap-4 col-span-2">
-            <div className="flex flex-col gap-4 bg-white rounded-lg p-3 text-gray-600 shadow">
-              <p className="font-bold text-xl text-gray-800">Intro</p>
+          <div className="col-span-2 flex flex-col gap-4">
+            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow">
+              <p className="text-xl font-bold text-gray-800">Intro</p>
               <div className="flex flex-col items-center gap-2">
                 <div className="flex flex-col items-center">
                   <p className="text-sm">Silence among noise</p>
@@ -142,19 +142,19 @@ const ProfilePage: React.FC = () => {
                     href="https://saiful-islam.vercel.app"
                     target="__blank"
                     rel="noreferrer"
-                    className="text-primary hover:underline text-sm"
+                    className="text-sm text-primary hover:underline"
                   >
                     https://saiful-islam.vercel.app
                   </a>
                 </div>
-                <button className="w-full px-3 py-1.5 rounded-md bg-gray-100 text-sm hover:bg-gray-200 font-semibold focus:outline-none">
+                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
                   Edit bio
                 </button>
               </div>
-              <div className="flex flex-col text-sm space-y-4">
+              <div className="flex flex-col space-y-4 text-sm">
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fas fa-briefcase text-gray-400 text-[1.25rem]"></i>
+                    <i className="fas fa-briefcase text-[1.25rem] text-gray-400"></i>
                   </span>
                   <p>
                     Full Stack Web Developer at{' '}
@@ -163,7 +163,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fas fa-graduation-cap text-gray-400 text-[1.25rem]"></i>
+                    <i className="fas fa-graduation-cap text-[1.25rem] text-gray-400"></i>
                   </span>
                   <p>
                     Studied B.Sc in SWE at{' '}
@@ -174,7 +174,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fas fa-home text-gray-400 text-[1.25rem]"></i>
+                    <i className="fas fa-home text-[1.25rem] text-gray-400"></i>
                   </span>
                   <p>
                     Lives in <span className="font-semibold">Dhaka</span>
@@ -182,7 +182,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fas fa-map-marker-alt text-gray-400 text-[1.25rem]"></i>
+                    <i className="fas fa-map-marker-alt text-[1.25rem] text-gray-400"></i>
                   </span>
                   <p>
                     From{' '}
@@ -193,7 +193,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fas fa-heart text-gray-400 text-[1.25rem]"></i>
+                    <i className="fas fa-heart text-[1.25rem] text-gray-400"></i>
                   </span>
                   <p>
                     <span className="font-semibold">Single</span>
@@ -201,7 +201,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fab fa-facebook text-gray-400 text-[1.25rem]"></i>
+                    <i className="fab fa-facebook text-[1.25rem] text-gray-400"></i>
                   </span>
                   <a
                     className="cursor-pointer hover:underline"
@@ -214,7 +214,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fab fa-instagram text-gray-400 text-[1.25rem]"></i>
+                    <i className="fab fa-instagram text-[1.25rem] text-gray-400"></i>
                   </span>
                   <a
                     className="cursor-pointer hover:underline"
@@ -227,7 +227,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fab fa-twitter text-gray-400 text-[1.25rem]"></i>
+                    <i className="fab fa-twitter text-[1.25rem] text-gray-400"></i>
                   </span>
                   <a
                     className="cursor-pointer hover:underline"
@@ -240,7 +240,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fab fa-github text-gray-400 text-[1.25rem]"></i>
+                    <i className="fab fa-github text-[1.25rem] text-gray-400"></i>
                   </span>
                   <a
                     className="cursor-pointer hover:underline"
@@ -253,7 +253,7 @@ const ProfilePage: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <span>
-                    <i className="fab fa-behance text-gray-400 text-[1.25rem]"></i>
+                    <i className="fab fa-behance text-[1.25rem] text-gray-400"></i>
                   </span>
                   <a
                     className="cursor-pointer hover:underline"
@@ -267,43 +267,43 @@ const ProfilePage: React.FC = () => {
               </div>
 
               <div>
-                <button className="w-full px-3 py-1.5 rounded-md bg-gray-100 text-sm hover:bg-gray-200 font-semibold focus:outline-none">
+                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
                   Edit details
                 </button>
               </div>
 
               <div className="flex items-center gap-3">
                 <img
-                  className="rounded-lg cursor-pointer"
+                  className="cursor-pointer rounded-lg"
                   alt="featured"
                   src="https://random.imagecdn.app/120/215"
                 />
                 <img
-                  className="rounded-lg cursor-pointer"
+                  className="cursor-pointer rounded-lg"
                   alt="featured"
                   src="https://random.imagecdn.app/120/215"
                 />
                 <img
-                  className="rounded-lg cursor-pointer"
+                  className="cursor-pointer rounded-lg"
                   alt="featured"
                   src="https://random.imagecdn.app/120/215"
                 />
               </div>
 
               <div>
-                <button className="w-full px-3 py-1.5 rounded-md bg-gray-100 text-sm hover:bg-gray-200 font-semibold focus:outline-none">
+                <button className="w-full rounded-md bg-gray-100 px-3 py-1.5 text-sm font-semibold hover:bg-gray-200 focus:outline-none">
                   Edit featured
                 </button>
               </div>
             </div>
-            <div className="flex flex-col gap-4 bg-white rounded-lg p-3 text-gray-600 shadow">
+            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow">
               <div className="flex items-center justify-between">
-                <p className="font-bold text-xl text-gray-800">Photos</p>
-                <a className="text-sm text-primary cursor-pointer hover:underline">
+                <p className="text-xl font-bold text-gray-800">Photos</p>
+                <a className="cursor-pointer text-sm text-primary hover:underline">
                   See all photos
                 </a>
               </div>
-              <div className="grid grid-cols-3 rounded-md overflow-hidden gap-1">
+              <div className="grid grid-cols-3 gap-1 overflow-hidden rounded-md">
                 <img
                   className="w-full"
                   alt="photo"
@@ -351,13 +351,13 @@ const ProfilePage: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-4 bg-white rounded-lg p-3 text-gray-600 shadow">
+            <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow">
               <div className="flex justify-between">
                 <div>
-                  <p className="font-bold text-xl text-gray-800">Friends</p>
+                  <p className="text-xl font-bold text-gray-800">Friends</p>
                   <p>528 friends</p>
                 </div>
-                <a className="text-sm text-primary cursor-pointer hover:underline">
+                <a className="cursor-pointer text-sm text-primary hover:underline">
                   See all friends
                 </a>
               </div>
@@ -433,23 +433,23 @@ const ProfilePage: React.FC = () => {
             {/* Create post */}
             <CreatePostBox />
             {/* post filter box */}
-            <div className="bg-white rounded-md shadow p-2 mt-4 px-3 text-sm">
-              <div className="flex items-center justify-between pb-2 border-b">
+            <div className="mt-4 rounded-md bg-white p-2 px-3 text-sm shadow">
+              <div className="flex items-center justify-between border-b pb-2">
                 <div>
-                  <p className="text-xl text-gray-700 font-bold">Posts</p>
+                  <p className="text-xl font-bold text-gray-700">Posts</p>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <button className="px-3 py-1.5 bg-gray-200 hover:bg-gray-300 rounded-md font-semibold focus:outline-none">
+                  <button className="rounded-md bg-gray-200 px-3 py-1.5 font-semibold hover:bg-gray-300 focus:outline-none">
                     <i className="fas fa-sliders-h mr-2"></i>Filters
                   </button>
-                  <button className="px-3 py-1.5 bg-gray-200 hover:bg-gray-300 rounded-md font-semibold focus:outline-none">
+                  <button className="rounded-md bg-gray-200 px-3 py-1.5 font-semibold hover:bg-gray-300 focus:outline-none">
                     <i className="fas fa-cog mr-2"></i>Manage Posts
                   </button>
                 </div>
               </div>
-              <div className="flex space-x-3 text-gray-500 mt-1 -mb-1">
+              <div className="-mb-1 mt-1 flex space-x-3 text-gray-500">
                 <button
-                  className={`font-semibold flex-1 h-8 focus:outline-none justify-center space-x-2 hover:bg-gray-100 rounded-md ${
+                  className={`h-8 flex-1 justify-center space-x-2 rounded-md font-semibold hover:bg-gray-100 focus:outline-none ${
                     postsView === 'listView' ? 'bg-gray-200' : undefined
                   }`}
                   onClick={() => setPostsView('listView')}
@@ -457,7 +457,7 @@ const ProfilePage: React.FC = () => {
                   <i className="fas fa-bars mr-2"></i>List View
                 </button>
                 <button
-                  className={`font-semibold flex-1 h-8 focus:outline-none justify-center space-x-2 hover:bg-gray-100 rounded-md  ${
+                  className={`h-8 flex-1 justify-center space-x-2 rounded-md font-semibold hover:bg-gray-100 focus:outline-none ${
                     postsView === 'gridView' ? 'bg-gray-200' : undefined
                   }`}
                   onClick={() => setPostsView('gridView')}

@@ -3,7 +3,7 @@ import NewsFeed from './NewsFeed';
 
 const NewsFeedPage: React.FC = () => {
   return (
-    <div className="w-[42.5rem] m-auto">
+    <div className="m-auto w-[42.5rem]">
       <NewsFeed />
     </div>
   );

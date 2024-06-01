@@ -34,13 +34,13 @@ const Button: React.FC<IProps> = (props) => {
     <button
       {...props}
       className={cn(
-        'px-4 items-center justify-center rounded-md shadow-md',
+        'items-center justify-center rounded-md px-4 shadow-md',
         block ? 'w-full' : 'inline-block',
         size === 'small' ? 'h-7' : size === 'large' ? 'h-11' : 'h-8',
         bg ? bg : 'bg-primary',
         color ? color : 'text-white',
         fontWeight ? fontWeight : 'font-semibold',
-        fontSize ? fontSize : 'text-sm'
+        fontSize ? fontSize : 'text-sm',
       )}
       disabled={isDisabled}
     >

@@ -11,11 +11,11 @@ interface IProps {
 const PostContainer: React.FC<IProps> = (props) => {
   const { postsView } = props;
   return (
-    <div className="mt-4 w-full h-full">
+    <div className="mt-4 h-full w-full">
       <div
         className={cn(
           'grid gap-2',
-          postsView === 'gridView' ? 'grid-cols-2' : 'grid-cols-1'
+          postsView === 'gridView' ? 'grid-cols-2' : 'grid-cols-1',
         )}
       >
         {postsData.length ? (
