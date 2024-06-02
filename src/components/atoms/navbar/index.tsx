@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const pathName = location?.pathname.split('/')[1];
   return (
-    <div className="fixed z-50 grid h-14 w-full grid-cols-7 gap-4 bg-white dark:bg-[#242526]">
+    <div className="fixed z-50 grid h-14 w-full grid-cols-7 gap-4 bg-white shadow-sm dark:bg-[#242526]">
       <div className="col-span-2 flex items-center">
         <div className="ml-2 flex items-center">
           <div className="h-10 text-primary">
@@ -156,7 +156,7 @@ const Navbar: React.FC = () => {
       <div className="col-span-2 flex items-center justify-end">
         <div className="flex h-10 w-auto items-center space-x-2 pr-2">
           <Link to="/profile">
-            <button className="flex h-10 items-center justify-center space-x-1 rounded-full px-2 text-black hover:bg-gray-300 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 dark:hover:bg-neutral-600">
+            <button className="flex h-10 items-center justify-center space-x-1 rounded-full px-2 text-black hover:bg-gray-300 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
               <div className="h-8">
                 <img
                   src="https://random.imagecdn.app/200/200"
