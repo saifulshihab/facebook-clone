@@ -135,7 +135,9 @@ const ProfilePage: React.FC = () => {
         <div className="grid grid-cols-5 gap-4">
           <div className="col-span-2 flex flex-col gap-4">
             <div className="flex flex-col gap-4 rounded-lg bg-white p-3 text-gray-600 shadow dark:bg-neutral-800 dark:text-gray-300">
-              <p className="text-xl font-bold text-gray-800">Intro</p>
+              <p className="text-xl font-bold text-gray-800 dark:text-gray-300">
+                Intro
+              </p>
               <div className="flex flex-col items-center gap-2">
                 <div className="flex flex-col items-center">
                   <p className="text-sm">Silence among noise</p>
