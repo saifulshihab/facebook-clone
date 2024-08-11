@@ -6,10 +6,12 @@ Building Facebook UI Clone using React & Tailwind CSS🔥
 
 # Installation
 
+Ensure sure you have [Node.js](https://nodejs.org) installed on your machine. Then run the following commands.
+
 ```javascript
 cd YOUR-PROJECT-FOLDER
-yarn  // install packages
-yarn dev  // run app on localhost
+yarn  // install all packages
+yarn dev  // run the app on localhost
 ```
 
 # Contribution
