@@ -8,8 +8,8 @@ Building Facebook UI Clone using React & Tailwind CSS🔥
 
 ```javascript
 cd YOUR-PROJECT-FOLDER
-yarn  // install all packages dependencies
-yarn dev  // run app
+yarn  // install packages
+yarn dev  // run app on localhost
 ```
 
 # Contribution
