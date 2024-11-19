@@ -23,4 +23,5 @@ jobs:
       - name: Install dependencies and build
         run: |
           yarn
+          yarn typecheck
           yarn build
