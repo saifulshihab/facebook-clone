@@ -207,9 +207,9 @@ const ProfilePage: React.FC = () => {
                     className="cursor-pointer hover:underline"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={'https://facebook.com/saifulshihab'}
+                    href="https://www.facebook.com/isishihab"
                   >
-                    <p>saifulshihab</p>
+                    <p>isishihab</p>
                   </a>
                 </div>
                 <div className="flex items-center space-x-2">
