@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import GamingPageLayout from '../components/layouts/GamingPageLayout';
-import MarketplacePageLayout from '../components/layouts/MarketplacePage';
+import GroupPageLayout from '../components/layouts/GroupPageLayout';
+import MarketplacePageLayout from '../components/layouts/MarketplacePageLayout';
 import NewsFeedLayout from '../components/layouts/NewsFeedLayout';
 import ProfilePageLayout from '../components/layouts/ProfilePageLayout';
 import WatchPageLayout from '../components/layouts/WatchPageLayout';
 import GamingPage from '../pages/gaming';
+import GroupPage from '../pages/group';
 import LoginPage from '../pages/login';
 import MarketplacePage from '../pages/marketplace';
 import NewsFeedPage from '../pages/newsfeed';
@@ -16,6 +18,7 @@ import WatchPage from '../pages/watch';
 import { PrivateRoute } from './PrivateRoute';
 import {
   GAMING,
+  GROUP,
   HOME,
   LOGIN,
   MARKETPLACE,
@@ -53,6 +56,15 @@ const Routers: React.FC = () => {
         element={
           <PrivateRoute layout={MarketplacePageLayout}>
             <MarketplacePage />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path={GROUP}
+        element={
+          <PrivateRoute layout={GroupPageLayout}>
+            <GroupPage />
           </PrivateRoute>
         }
       />

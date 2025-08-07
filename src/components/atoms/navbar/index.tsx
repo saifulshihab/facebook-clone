@@ -104,12 +104,12 @@ const Navbar: React.FC = () => {
           anchorSelect="#marketplace"
           content="Marketplace"
         />
-        <Link to="/groups" id="groups">
+        <Link to="/group" id="group">
           <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
-                  pathName === 'groups' ? 'text-primary' : 'text-gray-400'
+                  pathName === 'group' ? 'text-primary' : 'text-gray-400'
                 }`}
               >
                 <svg
@@ -127,7 +127,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </Link>
-        <Tooltip place="bottom" anchorSelect="#groups" content="Groups" />
+        <Tooltip place="bottom" anchorSelect="#group" content="Group" />
         <Link to="/gaming" id="gaming">
           <div className="flex h-12 w-24 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
