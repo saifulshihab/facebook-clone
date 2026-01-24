@@ -1,14 +1,8 @@
-import { Analytics } from '@vercel/analytics/next';
 import React, { PropsWithChildren } from 'react';
 
 const MainLayout: React.FC<PropsWithChildren> = (props) => {
   const { children } = props;
-  return (
-    <div>
-      {children}
-      <Analytics />
-    </div>
-  );
+  return <div>{children}</div>;
 };
 
 MainLayout.displayName = 'MainLayout';
