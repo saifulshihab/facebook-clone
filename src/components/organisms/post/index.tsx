@@ -1,7 +1,9 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
 import moment from 'moment';
-import React from 'react';
+import React, { useState } from 'react';
 import { IPost } from '../../../types/post';
+import PostModal from './PostModal';
+import SharesModal from './SharesModal';
 
 interface IProps {
   post: IPost;
@@ -36,10 +38,16 @@ const menuGroups: IMenuAction[][] = [
   ],
 ];
 
+const CAPTION_LIMIT = 120;
+
 const Post: React.FC<IProps> = ({ post }) => {
   const { user } = post;
+  const [modalOpen, setModalOpen] = useState(false);
+  const [sharesOpen, setSharesOpen] = useState(false);
+  const [captionExpanded, setCaptionExpanded] = useState(false);
 
   return (
+    <>
     <div className="h-auto w-full rounded-md bg-white shadow dark:bg-neutral-800">
       <div className="flex items-center space-x-2 p-2.5 px-4">
         <div className="h-10 w-10">
@@ -109,10 +117,20 @@ const Post: React.FC<IProps> = ({ post }) => {
       </div>
 
       {post.caption ? (
-        <div className="mb-1">
-          <p className="max-h-10 truncate px-3 text-sm text-gray-700 dark:text-gray-300">
-            {post.caption}
+        <div className="mb-2 px-3">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            {captionExpanded || post.caption.length <= CAPTION_LIMIT
+              ? post.caption
+              : post.caption.slice(0, CAPTION_LIMIT).trimEnd() + '...'}
           </p>
+          {post.caption.length > CAPTION_LIMIT && (
+            <button
+              onClick={() => setCaptionExpanded((v) => !v)}
+              className="text-sm font-semibold text-gray-500 hover:underline dark:text-gray-400"
+            >
+              {captionExpanded ? 'See less' : 'See more'}
+            </button>
+          )}
         </div>
       ) : null}
       {post.image ? (
@@ -140,10 +158,16 @@ const Post: React.FC<IProps> = ({ post }) => {
             <p className="ml-1 text-gray-500 dark:text-gray-300">{post.likes}</p>
           </div>
           <div className="flex items-center space-x-2">
-            <button className="text-gray-500 dark:text-gray-300">
+            <button
+              onClick={() => setModalOpen(true)}
+              className="text-gray-500 hover:underline dark:text-gray-300"
+            >
               {post.comments} Comments
             </button>
-            <button className="text-gray-500 dark:text-gray-300">
+            <button
+              onClick={() => setSharesOpen(true)}
+              className="text-gray-500 hover:underline dark:text-gray-300"
+            >
               {post.shares} Shares
             </button>
           </div>
@@ -153,7 +177,10 @@ const Post: React.FC<IProps> = ({ post }) => {
             <i className="fas fa-thumbs-up"></i>
             <p className="font-semibold">Like</p>
           </button>
-          <button className="flex h-8 flex-1 items-center justify-center space-x-2 rounded-md hover:bg-gray-100 focus:bg-gray-200 focus:outline-none dark:text-gray-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
+          <button
+            onClick={() => setModalOpen(true)}
+            className="flex h-8 flex-1 items-center justify-center space-x-2 rounded-md hover:bg-gray-100 focus:bg-gray-200 focus:outline-none dark:text-gray-300 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+          >
             <i className="fas fa-comment"></i>
             <p className="font-semibold">Comment</p>
           </button>
@@ -164,6 +191,18 @@ const Post: React.FC<IProps> = ({ post }) => {
         </div>
       </div>
     </div>
+
+    <PostModal
+      post={post}
+      isOpen={modalOpen}
+      onClose={() => setModalOpen(false)}
+    />
+    <SharesModal
+      post={post}
+      isOpen={sharesOpen}
+      onClose={() => setSharesOpen(false)}
+    />
+    </>
   );
 };
 

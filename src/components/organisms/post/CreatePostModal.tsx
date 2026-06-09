@@ -116,11 +116,11 @@ const CreatePostModal: React.FC<IProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Add to your post */}
-          <div className="mx-4 mt-3 flex items-center justify-between rounded-lg border px-4 py-2 dark:border-neutral-600">
-            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+          <div className="mx-4 mt-3 flex items-center justify-between rounded-lg border px-3 py-2 dark:border-neutral-600 sm:px-4">
+            <p className="hidden text-sm font-semibold text-gray-700 dark:text-gray-300 sm:block">
               Add to your post
             </p>
-            <div className="flex items-center gap-1">
+            <div className="flex w-full items-center justify-around sm:w-auto sm:justify-end sm:gap-1">
               <button
                 title="Photo/Video"
                 className="flex h-9 w-9 items-center justify-center rounded-full hover:bg-gray-100 focus:outline-none dark:hover:bg-neutral-700"
