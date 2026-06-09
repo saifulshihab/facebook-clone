@@ -6,12 +6,12 @@ import { storiesData } from '../../data';
 
 const NewsFeedPage: React.FC = () => {
   return (
-    <div className="m-auto w-[42.5rem]">
+    <div className="mx-auto w-full max-w-[42.5rem] px-2 sm:px-3 xl:px-0">
       <div className="mt-6 h-full w-full pb-5">
         {/* Story Section */}
-        <div className="h-50 my-6 flex w-full cursor-pointer items-center justify-center space-x-2 overflow-hidden">
+        <div className="h-50 my-6 flex w-full cursor-pointer items-center justify-start space-x-2 overflow-x-auto pb-1">
           <div
-            className="relative h-48 w-28 rounded-xl shadow"
+            className="relative h-48 w-28 flex-shrink-0 rounded-xl shadow"
             style={{
               backgroundImage: `url('https://random.imagecdn.app/500/400')`,
             }}

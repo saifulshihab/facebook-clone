@@ -10,7 +10,7 @@ const Story: React.FC<IProps> = (props) => {
   const { user } = story;
   return (
     <div
-      className="to relative h-48 w-28 cursor-pointer rounded-xl p-3 shadow"
+      className="to relative h-48 w-28 flex-shrink-0 cursor-pointer rounded-xl p-3 shadow"
       style={{ backgroundImage: `url(${story.image})` }}
     >
       <div className="absolute">

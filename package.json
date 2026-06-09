@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@headlessui/react": "^2.2.10",
     "clsx": "^2.1.0",
     "formik": "^2.2.9",
     "moment": "^2.29.2",

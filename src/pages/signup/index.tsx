@@ -12,7 +12,7 @@ const RegisterPage: React.FC = () => {
 
   return (
     <div className="flex h-full w-full items-center justify-center">
-      <div className="h-auto w-96 rounded-md bg-white p-4 shadow-md">
+      <div className="mx-4 h-auto w-full max-w-sm rounded-md bg-white p-4 shadow-md">
         <Formik
           initialValues={{
             emailOrPhone: '',
