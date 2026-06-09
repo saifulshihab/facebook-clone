@@ -9,3 +9,46 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Reusable thin scrollbar utility */
+@layer utilities {
+  .fb-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #d1d5db transparent;
+  }
+  .fb-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .fb-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .fb-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 9999px;
+  }
+  .fb-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #9ca3af;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .fb-scrollbar {
+    scrollbar-color: #525252 transparent;
+  }
+  .fb-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #525252;
+  }
+  .fb-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #737373;
+  }
+}
+
+.dark .fb-scrollbar {
+  scrollbar-color: #525252 transparent;
+}
+.dark .fb-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #525252;
+}
+.dark .fb-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #737373;
+}
