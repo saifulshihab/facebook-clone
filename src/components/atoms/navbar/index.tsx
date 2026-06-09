@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
   const location = useLocation();
   const pathName = location?.pathname.split('/')[1];
   return (
-    <div className="fixed z-50 flex h-14 w-full items-center justify-between gap-2 bg-white px-2 shadow-sm dark:bg-[#242526]">
+    <div className="fixed z-50 flex h-14 w-full items-center justify-between gap-2 border-b bg-white px-2 shadow-sm dark:border-neutral-700 dark:bg-[#242526]">
       <div className="flex min-w-0 items-center gap-2">
         <div className="h-10 flex-shrink-0 text-primary">
           <Link to="/">
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
       </div>
       <div className="hidden flex-1 items-center justify-center space-x-1 md:flex">
         <Link to="/" id="home">
-          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 lg:w-24">
+          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 lg:w-24 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         </Link>
         <Tooltip place="bottom" anchorSelect="#home" content="Home" />
         <Link to="/watch" id="watch">
-          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 lg:w-24">
+          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 lg:w-24 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div className="absolute right-0 top-0 rounded-lg bg-red-500 px-1 text-xs font-bold text-white">
                 9+
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
         </Link>
         <Tooltip place="bottom" anchorSelect="#watch" content="Video" />
         <Link to="/marketplace" id="marketplace">
-          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 lg:w-24">
+          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 lg:w-24 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -102,7 +102,7 @@ const Navbar: React.FC = () => {
           content="Marketplace"
         />
         <Link to="/group" id="group">
-          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 lg:w-24">
+          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 lg:w-24 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
         </Link>
         <Tooltip place="bottom" anchorSelect="#group" content="Group" />
         <Link to="/gaming" id="gaming">
-          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-700 lg:w-24">
+          <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 lg:w-24 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
               <div
                 className={`${
@@ -165,7 +165,7 @@ const Navbar: React.FC = () => {
             </div>
           </button>
         </Link>
-        <button className="hidden h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200 sm:block">
+        <button className="hidden h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none sm:block dark:bg-neutral-700 dark:text-gray-200">
           <i className="fas fa-plus"></i>
         </button>
         <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">

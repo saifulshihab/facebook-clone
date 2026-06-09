@@ -5,6 +5,7 @@ import GroupPageLayout from '../components/layouts/GroupPageLayout';
 import MarketplacePageLayout from '../components/layouts/MarketplacePageLayout';
 import NewsFeedLayout from '../components/layouts/NewsFeedLayout';
 import ProfilePageLayout from '../components/layouts/ProfilePageLayout';
+import StoriesLayout from '../components/layouts/StoriesLayout';
 import WatchPageLayout from '../components/layouts/WatchPageLayout';
 import GamingPage from '../pages/gaming';
 import GroupPage from '../pages/group';
@@ -14,6 +15,7 @@ import NewsFeedPage from '../pages/newsfeed';
 import PageNotFound from '../pages/notfound';
 import ProfilePage from '../pages/profile';
 import RegisterPage from '../pages/signup';
+import StoriesPage from '../pages/stories';
 import WatchPage from '../pages/watch';
 import { PrivateRoute } from './PrivateRoute';
 import {
@@ -24,6 +26,7 @@ import {
   MARKETPLACE,
   PROFILE,
   REGISTER,
+  STORIES,
   WATCH,
 } from './routes';
 
@@ -83,6 +86,15 @@ const Routers: React.FC = () => {
         element={
           <PrivateRoute layout={ProfilePageLayout}>
             <ProfilePage />
+          </PrivateRoute>
+        }
+      />
+
+      <Route
+        path={STORIES}
+        element={
+          <PrivateRoute layout={StoriesLayout}>
+            <StoriesPage />
           </PrivateRoute>
         }
       />

@@ -6,3 +6,4 @@ export const MARKETPLACE = '/marketplace';
 export const GROUP = '/group';
 export const GAMING = '/gaming';
 export const PROFILE = '/profile';
+export const STORIES = '/stories/:id';
