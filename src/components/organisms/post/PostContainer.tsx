@@ -1,8 +1,8 @@
 import React from 'react';
-import { postsData } from '../../data';
-import { TPostView } from '../../types/post';
-import { cn } from '../../utils';
-import Post from '../atoms/post';
+import Post from '.';
+import { postsData } from '../../../data';
+import { TPostView } from '../../../types/post';
+import { cn } from '../../../utils';
 
 interface IProps {
   postsView?: TPostView;

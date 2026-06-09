@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CreatePostBox from '../../components/atoms/post/CreatePostBox';
-import PostContainer from '../../components/container/PostContainer';
+import CreatePostBox from '../../components/organisms/post/CreatePostBox';
+import PostContainer from '../../components/organisms/post/PostContainer';
 import { TPostView } from '../../types/post';
 
 const ProfilePage: React.FC = () => {

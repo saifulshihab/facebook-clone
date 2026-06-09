@@ -1,6 +1,6 @@
 import { Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
 import React, { useState } from 'react';
-import Button from '../button/Button';
+import Button from '../../atoms/button/Button';
 
 interface IProps {
   isOpen: boolean;
