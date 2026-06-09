@@ -1,6 +1,6 @@
 import React from 'react';
 import Post from '.';
-import { postsData } from '../../../data';
+import { postsData } from '../../../lib/data';
 import { TPostView } from '../../../types/post';
 import { cn } from '../../../utils';
 

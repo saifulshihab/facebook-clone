@@ -5,8 +5,8 @@ import GroupPageLayout from '../components/layouts/GroupPageLayout';
 import MarketplacePageLayout from '../components/layouts/MarketplacePageLayout';
 import NewsFeedLayout from '../components/layouts/NewsFeedLayout';
 import ProfilePageLayout from '../components/layouts/ProfilePageLayout';
+import ReelPageLayout from '../components/layouts/ReelPageLayout';
 import StoriesLayout from '../components/layouts/StoriesLayout';
-import WatchPageLayout from '../components/layouts/WatchPageLayout';
 import GamingPage from '../pages/gaming';
 import GroupPage from '../pages/group';
 import LoginPage from '../pages/login';
@@ -15,8 +15,8 @@ import NewsFeedPage from '../pages/newsfeed';
 import PageNotFound from '../pages/notfound';
 import ProfilePage from '../pages/profile';
 import RegisterPage from '../pages/signup';
+import ReelPage from '../pages/reel';
 import StoriesPage from '../pages/stories';
-import WatchPage from '../pages/watch';
 import { PrivateRoute } from './PrivateRoute';
 import {
   GAMING,
@@ -25,9 +25,9 @@ import {
   LOGIN,
   MARKETPLACE,
   PROFILE,
+  REEL,
   REGISTER,
   STORIES,
-  WATCH,
 } from './routes';
 
 const Routers: React.FC = () => {
@@ -46,10 +46,10 @@ const Routers: React.FC = () => {
       />
 
       <Route
-        path={WATCH}
+        path={REEL}
         element={
-          <PrivateRoute layout={WatchPageLayout}>
-            <WatchPage />
+          <PrivateRoute layout={ReelPageLayout}>
+            <ReelPage />
           </PrivateRoute>
         }
       />

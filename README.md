@@ -10,8 +10,8 @@ Ensure sure you have [Node.js](https://nodejs.org) installed on your machine. Th
 
 ```javascript
 cd YOUR-PROJECT-FOLDER
-yarn  // install all packages
-yarn dev  // run the app on localhost
+npm install  // install all packages
+npm run dev  // run the app on localhost
 ```
 
 # Contribution

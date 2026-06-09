@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { storiesData } from '../../../data';
+import { storiesData } from '../../../lib/data';
 import Story from './Story';
 
 const SCROLL_AMOUNT = 240;
@@ -50,9 +50,14 @@ const StoryList: React.FC = () => {
         {/* Create Story card */}
         <div
           className="relative h-48 w-28 flex-shrink-0 rounded-xl bg-cover bg-center shadow"
-          style={{ backgroundImage: `url('https://random.imagecdn.app/500/400')` }}
+          style={{
+            backgroundImage: `url('https://random.imagecdn.app/500/400')`,
+          }}
         >
-          <div className="absolute flex w-full justify-center" style={{ bottom: '11%' }}>
+          <div
+            className="absolute flex w-full justify-center"
+            style={{ bottom: '11%' }}
+          >
             <button className="z-40 h-10 w-10 rounded-full border-4 border-white bg-primary focus:outline-none dark:border-neutral-800">
               <i className="fas fa-plus text-white"></i>
             </button>

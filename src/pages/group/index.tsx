@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import GroupFeed from '../../components/organisms/group/GroupFeed';
+import GroupLeftSidebar from '../../components/organisms/group/GroupLeftSidebar';
 
 const GroupPage: React.FC = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div className="p-2">
-      <p className="text-sm italic text-gray-500">Coming soon...</p>
+    <div className="flex h-full overflow-hidden">
+      <GroupLeftSidebar
+        isMobileOpen={sidebarOpen}
+        onMobileClose={() => setSidebarOpen(false)}
+      />
+      <GroupFeed onOpenSidebar={() => setSidebarOpen(true)} />
     </div>
   );
 };

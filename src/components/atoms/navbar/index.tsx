@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Tooltip } from 'react-tooltip';
+import MessengerDropdown from './MessengerDropdown';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
   const pathName = location?.pathname.split('/')[1];
+  const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const [showMessenger, setShowMessenger] = useState(false);
+  const profileMenuRef = useRef<HTMLDivElement>(null);
+  const messengerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        profileMenuRef.current &&
+        !profileMenuRef.current.contains(e.target as Node)
+      ) {
+        setShowProfileMenu(false);
+      }
+      if (
+        messengerRef.current &&
+        !messengerRef.current.contains(e.target as Node)
+      ) {
+        setShowMessenger(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
   return (
     <div className="fixed z-50 flex h-14 w-full items-center justify-between gap-2 border-b bg-white px-2 shadow-sm dark:border-neutral-700 dark:bg-[#242526]">
       <div className="flex min-w-0 items-center gap-2">
@@ -47,15 +71,12 @@ const Navbar: React.FC = () => {
           </div>
         </Link>
         <Tooltip place="bottom" anchorSelect="#home" content="Home" />
-        <Link to="/watch" id="watch">
+        <Link to="/reel" id="reel">
           <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 lg:w-24 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
-              <div className="absolute right-0 top-0 rounded-lg bg-red-500 px-1 text-xs font-bold text-white">
-                9+
-              </div>
               <div
                 className={`${
-                  pathName === 'watch' ? 'text-primary' : 'text-gray-400'
+                  pathName === 'reel' ? 'text-primary' : 'text-gray-400'
                 }`}
               >
                 <svg
@@ -73,7 +94,7 @@ const Navbar: React.FC = () => {
             </div>
           </div>
         </Link>
-        <Tooltip place="bottom" anchorSelect="#watch" content="Video" />
+        <Tooltip place="bottom" anchorSelect="#reel" content="Reels" />
         <Link to="/marketplace" id="marketplace">
           <div className="flex h-12 w-16 cursor-pointer items-center justify-center rounded-lg hover:bg-gray-100 lg:w-24 dark:hover:bg-neutral-700">
             <div className="relative flex h-auto w-14 items-center justify-center">
@@ -151,32 +172,131 @@ const Navbar: React.FC = () => {
         <Tooltip place="bottom" anchorSelect="#gaming" content="Gaming" />
       </div>
       <div className="flex flex-shrink-0 items-center space-x-1">
-        <Link to="/profile">
-          <button className="flex h-10 items-center justify-center space-x-1 rounded-full px-2 text-black hover:bg-gray-300 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700">
-            <div className="h-8">
-              <img
-                src="https://random.imagecdn.app/200/200"
-                className="h-8 w-8 rounded-full"
-                alt="dp"
-              />
-            </div>
-            <div className="hidden h-8 items-center sm:flex">
-              <p className="text-sm font-semibold">Saiful</p>
-            </div>
-          </button>
-        </Link>
         <button className="hidden h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none sm:block dark:bg-neutral-700 dark:text-gray-200">
           <i className="fas fa-plus"></i>
         </button>
-        <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">
-          <i className="fab fa-facebook-messenger"></i>
-        </button>
+        <div className="relative" ref={messengerRef}>
+          <button
+            onClick={() => {
+              setShowMessenger((prev) => !prev);
+              setShowProfileMenu(false);
+            }}
+            className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200"
+          >
+            <i className="fab fa-facebook-messenger"></i>
+          </button>
+          {showMessenger && <MessengerDropdown />}
+        </div>
         <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">
           <i className="fas fa-bell"></i>
         </button>
-        <button className="h-10 w-10 rounded-full bg-gray-200 hover:bg-neutral-600 focus:outline-none dark:bg-neutral-700 dark:text-gray-200">
-          <i className="fas fa-sort-down"></i>
-        </button>
+        <div className="relative" ref={profileMenuRef}>
+          <button
+            onClick={() => setShowProfileMenu((prev) => !prev)}
+            className="relative flex h-10 items-center justify-center space-x-1 rounded-full text-black hover:bg-gray-300 focus:outline-none dark:text-gray-200 dark:hover:bg-neutral-700"
+          >
+            <img
+              src="https://random.imagecdn.app/200/200"
+              className="h-10 w-10 rounded-full hover:brightness-95 dark:hover:brightness-110"
+              alt="dp"
+            />
+            <div className="absolute -bottom-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full border border-[#242526] bg-gray-200 text-[9px] text-black dark:bg-neutral-600 dark:text-white">
+              <i className="fas fa-chevron-down"></i>
+            </div>
+          </button>
+
+          {showProfileMenu && (
+            <div className="absolute right-0 top-12 w-[340px] rounded-2xl bg-white p-2 shadow-2xl dark:bg-[#242526] dark:shadow-black/60">
+              {/* Profile row */}
+              <Link
+                to="/profile"
+                onClick={() => setShowProfileMenu(false)}
+                className="flex items-center gap-3 rounded-xl p-2 hover:bg-gray-100 dark:hover:bg-[#3A3B3C]"
+              >
+                <img
+                  src="https://random.imagecdn.app/200/200"
+                  className="h-9 w-9 rounded-full"
+                  alt="dp"
+                />
+                <span className="font-semibold text-black dark:text-white">
+                  Saiful Islam Shihab
+                </span>
+              </Link>
+
+              <hr className="my-2 border-gray-200 dark:border-neutral-600" />
+
+              {/* See all profiles */}
+              <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-gray-100 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-200 dark:bg-[#3A3B3C] dark:text-gray-300 dark:hover:bg-neutral-600">
+                <i className="fas fa-user-circle text-base"></i>
+                <span>See all profiles</span>
+              </button>
+
+              <hr className="my-2 border-gray-200 dark:border-neutral-600" />
+
+              {/* Menu items */}
+              {[
+                {
+                  icon: 'fas fa-cog',
+                  label: 'Settings & privacy',
+                  hasArrow: true,
+                },
+                {
+                  icon: 'fas fa-question-circle',
+                  label: 'Help & support',
+                  hasArrow: true,
+                },
+                {
+                  icon: 'fas fa-moon',
+                  label: 'Display & accessibility',
+                  hasArrow: true,
+                },
+                {
+                  icon: 'fas fa-comment-alt',
+                  label: 'Give feedback',
+                  sub: 'CTRL B',
+                  hasArrow: false,
+                },
+              ].map(({ icon, label, sub, hasArrow }) => (
+                <button
+                  key={label}
+                  className="flex w-full items-center gap-3 rounded-xl p-2 hover:bg-gray-100 dark:hover:bg-[#3A3B3C]"
+                >
+                  <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gray-200 text-base dark:bg-[#3A3B3C] dark:text-white">
+                    <i className={icon}></i>
+                  </div>
+                  <div className="flex flex-col items-start">
+                    <span className="text-[15px] font-medium text-black dark:text-white">
+                      {label}
+                    </span>
+                    {sub && (
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        {sub}
+                      </span>
+                    )}
+                  </div>
+                  {hasArrow && (
+                    <i className="fas fa-chevron-right ml-auto text-xs text-gray-500 dark:text-gray-400"></i>
+                  )}
+                </button>
+              ))}
+
+              <button className="flex w-full items-center gap-3 rounded-xl p-2 hover:bg-gray-100 dark:hover:bg-[#3A3B3C]">
+                <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gray-200 text-base dark:bg-[#3A3B3C] dark:text-white">
+                  <i className="fas fa-sign-out-alt"></i>
+                </div>
+                <span className="text-[15px] font-medium text-black dark:text-white">
+                  Log out
+                </span>
+              </button>
+
+              <hr className="my-2 border-gray-200 dark:border-neutral-600" />
+
+              <p className="px-2 pb-1 text-center text-[11px] text-gray-400">
+                Privacy · Terms · Advertising · Ad Choices ▷ · Cookies · More
+              </p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

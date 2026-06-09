@@ -1,4 +1,7 @@
 import React from 'react';
+import { chatsData } from '../../../lib/data';
+
+const contacts = chatsData.filter((c) => !c.user.isGroup && !c.user.isMetaAI);
 
 const RightSidebar: React.FC = () => {
   return (
@@ -61,27 +64,28 @@ const RightSidebar: React.FC = () => {
         </div>
         <div className="-ml-2">
           <ul>
-            {Array(6)
-              .fill(0)
-              .map((_, idx) => (
-                <li
-                  key={idx}
-                  className="justify-content mb-2 flex h-12 cursor-pointer items-center space-x-2 rounded-md p-2 hover:bg-gray-200 dark:hover:bg-neutral-800"
-                >
-                  <div>
-                    <img
-                      className="h-8 w-8 rounded-full"
-                      src={`https://random.imagecdn.app/200/${200 + idx}`}
-                      alt="user"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-200">
-                      Saiful Islam Shihab
-                    </p>
-                  </div>
-                </li>
-              ))}
+            {contacts.map((chat) => (
+              <li
+                key={chat._id}
+                className="justify-content mb-2 flex h-12 cursor-pointer items-center space-x-2 rounded-md p-2 hover:bg-gray-200 dark:hover:bg-neutral-800"
+              >
+                <div className="relative">
+                  <img
+                    className="h-8 w-8 rounded-full"
+                    src={chat.user.dp}
+                    alt={chat.user.fullName}
+                  />
+                  {chat.user.isOnline && (
+                    <span className="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full border-2 border-white bg-green-500 dark:border-neutral-900" />
+                  )}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-gray-500 dark:text-gray-200">
+                    {chat.user.fullName}
+                  </p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

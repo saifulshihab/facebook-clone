@@ -1,7 +1,18 @@
 {
   "name": "facebook-ui-clone",
   "version": "0.1.0",
-  "private": true,
+  "description": "A pixel-perfect Facebook UI clone built with React 18, TypeScript, Vite, and Tailwind CSS. Includes Newsfeed, Marketplace, Groups, Gaming, Stories, Reels, and more.",
+  "author": "saifulshihab <saifulshihab29@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/saifulshihab/facebook-clone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saifulshihab/facebook-clone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saifulshihab/facebook-clone/issues"
+  },
+  "private": false,
   "type": "module",
   "dependencies": {
     "@headlessui/react": "^2.2.10",
@@ -26,11 +37,25 @@
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|jsx|tsx|json)\""
   },
   "keywords": [
-    "react",
     "facebook-clone",
-    "facebook",
+    "facebook-ui",
+    "react",
+    "react18",
+    "typescript",
+    "vite",
     "tailwindcss",
-    "react-facebook-clone"
+    "social-media-clone",
+    "social-network",
+    "frontend",
+    "ui-clone",
+    "newsfeed",
+    "marketplace",
+    "groups",
+    "gaming",
+    "stories",
+    "reels",
+    "headlessui",
+    "react-router"
   ],
   "devDependencies": {
     "@types/react": "^18.0.25",

@@ -1,7 +1,7 @@
 import moment from 'moment';
 import React from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { storiesData } from '../../data';
+import { storiesData } from '../../lib/data';
 
 const REACTIONS = ['👍', '❤️', '😍', '😄', '😮', '😢', '😡'];
 
@@ -9,7 +9,10 @@ const StoriesPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  const currentIndex = Math.max(0, storiesData.findIndex((s) => s._id === id));
+  const currentIndex = Math.max(
+    0,
+    storiesData.findIndex((s) => s._id === id),
+  );
   const currentStory = storiesData[currentIndex];
 
   const hasPrev = currentIndex > 0;
@@ -23,22 +26,32 @@ const StoriesPage: React.FC = () => {
         <div className="px-4 pt-5">
           <h2 className="text-xl font-bold text-gray-100">Stories</h2>
           <div className="mt-1 flex gap-2 text-sm text-[#2d88ff]">
-            <button className="hover:underline focus:outline-none">Archive</button>
+            <button className="hover:underline focus:outline-none">
+              Archive
+            </button>
             <span className="text-gray-500">·</span>
-            <button className="hover:underline focus:outline-none">Settings</button>
+            <button className="hover:underline focus:outline-none">
+              Settings
+            </button>
           </div>
         </div>
 
         {/* Your story */}
         <div className="mt-4 px-3">
-          <p className="mb-2 px-1 text-sm font-semibold text-gray-400">Your story</p>
+          <p className="mb-2 px-1 text-sm font-semibold text-gray-400">
+            Your story
+          </p>
           <button className="flex w-full items-center gap-3 rounded-xl px-2 py-2 hover:bg-neutral-700 focus:outline-none">
             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-neutral-600">
               <i className="fas fa-plus text-lg text-[#2d88ff]"></i>
             </div>
             <div className="text-left">
-              <p className="text-sm font-semibold text-gray-100">Create a story</p>
-              <p className="text-xs text-gray-400">Share a photo or write something.</p>
+              <p className="text-sm font-semibold text-gray-100">
+                Create a story
+              </p>
+              <p className="text-xs text-gray-400">
+                Share a photo or write something.
+              </p>
             </div>
           </button>
         </div>
@@ -47,7 +60,9 @@ const StoriesPage: React.FC = () => {
 
         {/* All stories */}
         <div className="px-3 pb-4">
-          <p className="mb-2 px-1 text-sm font-semibold text-gray-400">All stories</p>
+          <p className="mb-2 px-1 text-sm font-semibold text-gray-400">
+            All stories
+          </p>
           {storiesData.map((story) => (
             <Link
               key={story._id}
@@ -81,7 +96,9 @@ const StoriesPage: React.FC = () => {
         {/* Prev button */}
         {hasPrev && (
           <button
-            onClick={() => navigate(`/stories/${storiesData[currentIndex - 1]._id}`)}
+            onClick={() =>
+              navigate(`/stories/${storiesData[currentIndex - 1]._id}`)
+            }
             className="absolute left-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 focus:outline-none"
           >
             <i className="fas fa-chevron-left text-sm"></i>
@@ -91,7 +108,9 @@ const StoriesPage: React.FC = () => {
         {/* Next button */}
         {hasNext && (
           <button
-            onClick={() => navigate(`/stories/${storiesData[currentIndex + 1]._id}`)}
+            onClick={() =>
+              navigate(`/stories/${storiesData[currentIndex + 1]._id}`)
+            }
             className="absolute right-4 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm hover:bg-white/30 focus:outline-none"
           >
             <i className="fas fa-chevron-right text-sm"></i>
@@ -99,7 +118,7 @@ const StoriesPage: React.FC = () => {
         )}
 
         {/* Card area — fills all vertical space above the bottom bar */}
-        <div className="flex min-h-0 flex-1 items-center justify-center px-4 pt-4 pb-2">
+        <div className="flex min-h-0 flex-1 items-center justify-center px-4 pb-2 pt-4">
           {/* Story card — height fills this area; width derived from aspect-ratio */}
           <div
             className="relative h-full max-h-[620px] overflow-hidden rounded-2xl shadow-2xl"
@@ -128,7 +147,11 @@ const StoriesPage: React.FC = () => {
                       className="h-full bg-white transition-all duration-300"
                       style={{
                         width:
-                          i < currentIndex ? '100%' : i === currentIndex ? '45%' : '0%',
+                          i < currentIndex
+                            ? '100%'
+                            : i === currentIndex
+                              ? '45%'
+                              : '0%',
                       }}
                     />
                   </div>
@@ -138,7 +161,10 @@ const StoriesPage: React.FC = () => {
               {/* User row */}
               <div className="mt-3 flex items-center gap-2">
                 <img
-                  src={currentStory.user.dp ?? 'https://random.imagecdn.app/200/200'}
+                  src={
+                    currentStory.user.dp ??
+                    'https://random.imagecdn.app/200/200'
+                  }
                   className="h-8 w-8 flex-shrink-0 rounded-full border-2 border-white object-cover"
                   alt={currentStory.user.fullName}
                 />
